@@ -1,0 +1,9 @@
+{
+  "raw/ashrae-v1/building_metadata.csv": "\"0x8DF418E4EA6C758\"",
+  "raw/ashrae-v1/sample_submission.csv": "\"0x8DF418E5202F654\"",
+  "raw/ashrae-v1/test.csv": "\"0x8DF418E5901D758\"",
+  "raw/ashrae-v1/train.csv": "\"0x8DF418E5DA97EB0\"",
+  "raw/ashrae-v1/weather_test.csv": "\"0x8DF418E5F2CB048\"",
+  "raw/ashrae-v1/weather_train.csv": "\"0x8DF418E60A88CBC\"",
+  "raw/ashrae-v1/source_manifest_v1.json": "\"0x8DF418E620E3D14\""
+}

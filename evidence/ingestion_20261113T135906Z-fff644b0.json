@@ -1,0 +1,59 @@
+{
+  "run_id": "20261113T135906Z-fff644b0",
+  "account": "amazonlake60306539",
+  "container": "electricity-project",
+  "raw_prefix": "raw/ashrae-v1/",
+  "status": "passed",
+  "files": [
+    {
+      "blob": "raw/ashrae-v1/building_metadata.csv",
+      "action": "uploaded",
+      "size_bytes": 45527,
+      "sha256": "357bf585047359e9dfbaef2935453429f8ec19e5e80c08a8eb066789f28c4070",
+      "etag": "\"0x8DF418E4EA6C758\""
+    },
+    {
+      "blob": "raw/ashrae-v1/sample_submission.csv",
+      "action": "uploaded",
+      "size_bytes": 447562511,
+      "sha256": "3f3eb7738f5649203e603fa4c6bad89c7c560e360ede3c94d5c726d813009f28",
+      "etag": "\"0x8DF418E5202F654\""
+    },
+    {
+      "blob": "raw/ashrae-v1/test.csv",
+      "action": "uploaded",
+      "size_bytes": 1462461085,
+      "sha256": "3b3d9ce771a2266500e085717d9959bd37674fb3573397955953523d06d6aa2b",
+      "etag": "\"0x8DF418E5901D758\""
+    },
+    {
+      "blob": "raw/ashrae-v1/train.csv",
+      "action": "uploaded",
+      "size_bytes": 678616640,
+      "sha256": "2d75e0c4cfa93818647cf5272ef8d48f9cf8e9d3479dde357faae381d1abbcb3",
+      "etag": "\"0x8DF418E5DA97EB0\""
+    },
+    {
+      "blob": "raw/ashrae-v1/weather_test.csv",
+      "action": "uploaded",
+      "size_bytes": 14787908,
+      "sha256": "ba8021675ca99796e4bf9087793b955c84822a0cef24a15d7ecc7dc63dcd1423",
+      "etag": "\"0x8DF418E5F2CB048\""
+    },
+    {
+      "blob": "raw/ashrae-v1/weather_train.csv",
+      "action": "uploaded",
+      "size_bytes": 7450075,
+      "sha256": "81022191f16dacc21494c15dac7975611cb39922fc7332e419a857cbb00cc125",
+      "etag": "\"0x8DF418E60A88CBC\""
+    },
+    {
+      "blob": "raw/ashrae-v1/source_manifest_v1.json",
+      "action": "uploaded",
+      "size_bytes": 2534,
+      "sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0",
+      "etag": "\"0x8DF418E620E3D14\""
+    }
+  ],
+  "duration_seconds": 44.07
+}

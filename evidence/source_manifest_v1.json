@@ -1,0 +1,95 @@
+{
+  "dataset": "ASHRAE Great Energy Predictor III",
+  "source_url": "https://www.kaggle.com/competitions/ashrae-energy-prediction/data",
+  "source_version": "ashrae-v1",
+  "format": "CSV",
+  "ingestion_mode": "batch",
+  "refresh_strategy": "Manual refresh into a new source version.",
+  "hash_algorithm": "SHA-256",
+  "total_collection_bytes": 2610923746,
+  "source_data_bytes": 2163361235,
+  "files": [
+    {
+      "file_name": "building_metadata.csv",
+      "size_bytes": 45527,
+      "sha256": "357bf585047359e9dfbaef2935453429f8ec19e5e80c08a8eb066789f28c4070",
+      "columns": [
+        "site_id",
+        "building_id",
+        "primary_use",
+        "square_feet",
+        "year_built",
+        "floor_count"
+      ],
+      "role": "source_data"
+    },
+    {
+      "file_name": "sample_submission.csv",
+      "size_bytes": 447562511,
+      "sha256": "3f3eb7738f5649203e603fa4c6bad89c7c560e360ede3c94d5c726d813009f28",
+      "columns": [
+        "row_id",
+        "meter_reading"
+      ],
+      "role": "submission_template"
+    },
+    {
+      "file_name": "test.csv",
+      "size_bytes": 1462461085,
+      "sha256": "3b3d9ce771a2266500e085717d9959bd37674fb3573397955953523d06d6aa2b",
+      "columns": [
+        "row_id",
+        "building_id",
+        "meter",
+        "timestamp"
+      ],
+      "role": "source_data"
+    },
+    {
+      "file_name": "train.csv",
+      "size_bytes": 678616640,
+      "sha256": "2d75e0c4cfa93818647cf5272ef8d48f9cf8e9d3479dde357faae381d1abbcb3",
+      "columns": [
+        "building_id",
+        "meter",
+        "timestamp",
+        "meter_reading"
+      ],
+      "role": "source_data"
+    },
+    {
+      "file_name": "weather_test.csv",
+      "size_bytes": 14787908,
+      "sha256": "ba8021675ca99796e4bf9087793b955c84822a0cef24a15d7ecc7dc63dcd1423",
+      "columns": [
+        "site_id",
+        "timestamp",
+        "air_temperature",
+        "cloud_coverage",
+        "dew_temperature",
+        "precip_depth_1_hr",
+        "sea_level_pressure",
+        "wind_direction",
+        "wind_speed"
+      ],
+      "role": "source_data"
+    },
+    {
+      "file_name": "weather_train.csv",
+      "size_bytes": 7450075,
+      "sha256": "81022191f16dacc21494c15dac7975611cb39922fc7332e419a857cbb00cc125",
+      "columns": [
+        "site_id",
+        "timestamp",
+        "air_temperature",
+        "cloud_coverage",
+        "dew_temperature",
+        "precip_depth_1_hr",
+        "sea_level_pressure",
+        "wind_direction",
+        "wind_speed"
+      ],
+      "role": "source_data"
+    }
+  ]
+}
