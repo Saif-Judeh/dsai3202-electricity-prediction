@@ -1,0 +1,215 @@
+{
+  "scope": "All electricity observations January-August 2016; no sample",
+  "etl_identity": {
+    "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+    "duckdb_version": "1.4.3",
+    "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+    "source_manifest_sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0"
+  },
+  "output_manifest_sha256": "a8f96aaa98fe90b84e897e5505af02bf2e957d7cd3f95afec1a089f99db3faa8",
+  "script_sha256": "baf66b5016d4c081bc4f4ac571aa5ba4f1e34f6167229e64f124cded18a18542",
+  "results": {
+    "zeros_by_site": [
+      {
+        "site_id": 0,
+        "readings": 603750,
+        "buildings": 105,
+        "zero_readings": 346055,
+        "zero_percent": 57.32
+      },
+      {
+        "site_id": 9,
+        "readings": 712058,
+        "buildings": 122,
+        "zero_readings": 36194,
+        "zero_percent": 5.08
+      },
+      {
+        "site_id": 13,
+        "readings": 824165,
+        "buildings": 141,
+        "zero_readings": 18278,
+        "zero_percent": 2.22
+      },
+      {
+        "site_id": 14,
+        "readings": 593194,
+        "buildings": 102,
+        "zero_readings": 17841,
+        "zero_percent": 3.01
+      },
+      {
+        "site_id": 8,
+        "readings": 380015,
+        "buildings": 70,
+        "zero_readings": 17716,
+        "zero_percent": 4.66
+      },
+      {
+        "site_id": 7,
+        "readings": 69648,
+        "buildings": 12,
+        "zero_readings": 10271,
+        "zero_percent": 14.75
+      },
+      {
+        "site_id": 15,
+        "readings": 526833,
+        "buildings": 113,
+        "zero_readings": 8238,
+        "zero_percent": 1.56
+      },
+      {
+        "site_id": 5,
+        "readings": 521184,
+        "buildings": 89,
+        "zero_readings": 5939,
+        "zero_percent": 1.14
+      },
+      {
+        "site_id": 2,
+        "readings": 789627,
+        "buildings": 135,
+        "zero_readings": 4713,
+        "zero_percent": 0.6
+      },
+      {
+        "site_id": 4,
+        "readings": 484764,
+        "buildings": 90,
+        "zero_readings": 2358,
+        "zero_percent": 0.49
+      },
+      {
+        "site_id": 3,
+        "readings": 1579303,
+        "buildings": 273,
+        "zero_readings": 2009,
+        "zero_percent": 0.13
+      },
+      {
+        "site_id": 12,
+        "readings": 210601,
+        "buildings": 36,
+        "zero_readings": 1134,
+        "zero_percent": 0.54
+      },
+      {
+        "site_id": 10,
+        "readings": 159648,
+        "buildings": 30,
+        "zero_readings": 281,
+        "zero_percent": 0.18
+      },
+      {
+        "site_id": 6,
+        "readings": 210284,
+        "buildings": 36,
+        "zero_readings": 31,
+        "zero_percent": 0.01
+      },
+      {
+        "site_id": 1,
+        "readings": 298654,
+        "buildings": 51,
+        "zero_readings": 0,
+        "zero_percent": 0.0
+      },
+      {
+        "site_id": 11,
+        "readings": 28765,
+        "buildings": 5,
+        "zero_readings": 0,
+        "zero_percent": 0.0
+      }
+    ],
+    "time_gaps": [
+      {
+        "gap_events": 6278,
+        "buildings_with_gaps": 965,
+        "missing_hours_inside_observed_spans": 206659,
+        "longest_gap_hours": 2612
+      }
+    ],
+    "zero_run_summary": [
+      {
+        "zero_runs": 10075,
+        "runs_at_least_24_hours": 1466,
+        "buildings_with_long_zero_runs": 336,
+        "longest_zero_run_hours": 5856
+      }
+    ],
+    "longest_zero_runs": [
+      {
+        "building_id": 1221,
+        "site_id": 13,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-08-31 23:00:00",
+        "consecutive_zero_hours": 5856
+      },
+      {
+        "building_id": 1169,
+        "site_id": 13,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-08-03 15:00:00",
+        "consecutive_zero_hours": 5176
+      },
+      {
+        "building_id": 1113,
+        "site_id": 13,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-07-27 10:00:00",
+        "consecutive_zero_hours": 5003
+      },
+      {
+        "building_id": 802,
+        "site_id": 7,
+        "first_timestamp": "2016-03-18 13:00:00",
+        "last_timestamp": "2016-08-23 07:00:00",
+        "consecutive_zero_hours": 3787
+      },
+      {
+        "building_id": 1345,
+        "site_id": 15,
+        "first_timestamp": "2016-03-29 22:00:00",
+        "last_timestamp": "2016-08-31 23:00:00",
+        "consecutive_zero_hours": 3722
+      },
+      {
+        "building_id": 954,
+        "site_id": 9,
+        "first_timestamp": "2016-03-13 04:00:00",
+        "last_timestamp": "2016-08-08 10:00:00",
+        "consecutive_zero_hours": 3559
+      },
+      {
+        "building_id": 3,
+        "site_id": 0,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "consecutive_zero_hours": 2923
+      },
+      {
+        "building_id": 6,
+        "site_id": 0,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "consecutive_zero_hours": 2923
+      },
+      {
+        "building_id": 7,
+        "site_id": 0,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "consecutive_zero_hours": 2923
+      },
+      {
+        "building_id": 8,
+        "site_id": 0,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "consecutive_zero_hours": 2923
+      }
+    ]
+  }
+}

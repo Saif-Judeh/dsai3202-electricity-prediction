@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "status": "passed",
+      "test": "preserves_all_rows_and_chronological_splits"
+    },
+    {
+      "status": "passed",
+      "test": "exact_hour_gaps_and_zero_history"
+    },
+    {
+      "status": "passed",
+      "test": "daily_weekly_offsets_and_building_isolation"
+    },
+    {
+      "status": "passed",
+      "test": "boundary_history_and_calendar_fields"
+    },
+    {
+      "status": "passed",
+      "test": "availability_audits_and_predictor_allowlist"
+    },
+    {
+      "status": "passed",
+      "test": "current_and_future_label_changes_do_not_change_predictors"
+    },
+    {
+      "status": "passed",
+      "test": "safe_rerun_and_processed_input_preservation"
+    },
+    {
+      "status": "passed",
+      "test": "changed_feature_output_blocked"
+    },
+    {
+      "status": "passed",
+      "test": "changed_processed_input_blocks_publication"
+    }
+  ],
+  "feature_code_sha256": "12b1dca167a10f2af214a4f950235ef495ddf97b69f6b7d519eaa7887cbca432",
+  "scope": "synthetic isolated CSV -> real ETL -> real feature Parquet",
+  "status": "passed",
+  "temporary_data_removed": true,
+  "test_code_sha256": "5fdd705d1705db85ea84cca0be0b474791b582ba31389d9dc40c26a4d096c16f"
+}

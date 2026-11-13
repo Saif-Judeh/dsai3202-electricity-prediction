@@ -1,0 +1,14 @@
+{
+  "feature_version": "electricity-features-v1",
+  "required_duckdb_version": "1.4.3",
+  "train_start": "2016-01-01 00:00:00",
+  "validation_start": "2016-09-01 00:00:00",
+  "test_start": "2016-11-01 00:00:00",
+  "end_exclusive": "2017-01-01 00:00:00",
+  "forecast_horizon_hours": 1,
+  "history_offsets_hours": [1, 24, 168],
+  "availability_assumption": "Each reading is complete and available at its reported timestamp. Forecast origin is one hour before target timestamp. This is an offline assumption, not a verified sensor-delivery guarantee.",
+  "evaluation_protocol": "Rolling one-hour-ahead forecasts: earlier validation/test readings can become history for later forecasts after observation. This is not a fixed-origin forecast of an entire held-out month.",
+  "threads": 2,
+  "memory_limit": "6GB"
+}

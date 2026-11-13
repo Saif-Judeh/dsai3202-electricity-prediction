@@ -1,0 +1,107 @@
+{
+  "action": "published_local",
+  "config": {
+    "availability_assumption": "Each reading is complete and available at its reported timestamp. Forecast origin is one hour before target timestamp. This is an offline assumption, not a verified sensor-delivery guarantee.",
+    "end_exclusive": "2017-01-01 00:00:00",
+    "evaluation_protocol": "Rolling one-hour-ahead forecasts: earlier validation/test readings can become history for later forecasts after observation. This is not a fixed-origin forecast of an entire held-out month.",
+    "feature_version": "electricity-features-v1",
+    "forecast_horizon_hours": 1,
+    "history_offsets_hours": [
+      1,
+      24,
+      168
+    ],
+    "memory_limit": "6GB",
+    "required_duckdb_version": "1.4.3",
+    "test_start": "2016-11-01 00:00:00",
+    "threads": 2,
+    "train_start": "2016-01-01 00:00:00",
+    "validation_start": "2016-09-01 00:00:00"
+  },
+  "elapsed_seconds": 25.047,
+  "files": [
+    {
+      "file_name": "feature_catalog.json",
+      "sha256": "e08cc3b988dfc6c75669cf1864845b7d9014b8f5037918a0f16e07988c6a6f7e",
+      "size_bytes": 11137
+    },
+    {
+      "file_name": "test.parquet",
+      "sha256": "27f9a9ea9a5ce6943bcf4b6ffda1b8c899d7972d2275944982ae2ec05ed955a7",
+      "size_bytes": 22918819
+    },
+    {
+      "file_name": "train.parquet",
+      "sha256": "8f70d7f6a898e61089577a9a20176bd35543bbb374c970153dbc8b546220de2e",
+      "size_bytes": 103858941
+    },
+    {
+      "file_name": "validation.parquet",
+      "sha256": "152bca41e8e9392f699e7cf02a39e53cdaeccf56d389caefb68bc27c333f9a16",
+      "size_bytes": 22811373
+    }
+  ],
+  "identity": {
+    "duckdb_version": "1.4.3",
+    "feature_code_sha256": "12b1dca167a10f2af214a4f950235ef495ddf97b69f6b7d519eaa7887cbca432",
+    "feature_config_sha256": "62c3ca94d8cc8110d07e4ccb05f7d331aec2f7021c0068452e834802b88f5d1c",
+    "processed_manifest_sha256": "a8f96aaa98fe90b84e897e5505af02bf2e957d7cd3f95afec1a089f99db3faa8",
+    "validation_helper_sha256": "658003d02b276a8e401a6f8d1913cb7e095a3d5b5cd948b159cff475445e9f3f"
+  },
+  "output_bytes": 149600270,
+  "output_directory": "/home/azureuser/electricity-data/features/features-v1-4416c69c061b464e",
+  "peak_process_rss_mib": 2440.82,
+  "processed_directory": "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969",
+  "quality": {
+    "dropped_rows": 0,
+    "duplicate_key_groups": 0,
+    "input_rows": 12060910,
+    "invalid_feature_rows": 0,
+    "output_rows": 12060910,
+    "split_summary": [
+      {
+        "baseline_eligible_rows": 7706058,
+        "buildings": 1410,
+        "first_target": "2016-01-01 00:00:00",
+        "last_target": "2016-08-31 23:00:00",
+        "missing_lag_168h": 286435,
+        "missing_lag_1h": 7688,
+        "missing_lag_24h": 58518,
+        "rows": 7992493,
+        "split": "train"
+      },
+      {
+        "baseline_eligible_rows": 2038958,
+        "buildings": 1409,
+        "first_target": "2016-09-01 00:00:00",
+        "last_target": "2016-10-31 23:00:00",
+        "missing_lag_168h": 6227,
+        "missing_lag_1h": 1307,
+        "missing_lag_24h": 5323,
+        "rows": 2045185,
+        "split": "validation"
+      },
+      {
+        "baseline_eligible_rows": 1989186,
+        "buildings": 1407,
+        "first_target": "2016-11-01 00:00:00",
+        "last_target": "2016-12-31 23:00:00",
+        "missing_lag_168h": 34046,
+        "missing_lag_1h": 1366,
+        "missing_lag_24h": 13483,
+        "rows": 2023232,
+        "split": "test"
+      }
+    ]
+  },
+  "run_id": "20261113T151352Z-949f841d",
+  "status": "passed",
+  "training_correlations": {
+    "pairs_168h": 7706058,
+    "pairs_1h": 7984805,
+    "pairs_24h": 7933975,
+    "target_vs_lag_168h": 0.9657408811468465,
+    "target_vs_lag_1h": 0.9856611717548707,
+    "target_vs_lag_24h": 0.9689208824474136
+  }
+}

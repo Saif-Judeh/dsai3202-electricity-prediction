@@ -1,0 +1,38 @@
+{
+  "scope": "January-August 2016; all training readings; no sample",
+  "definition": "Same building, exact timestamp offset; zeros count as available",
+  "etl_identity": {
+    "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+    "duckdb_version": "1.4.3",
+    "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+    "source_manifest_sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0"
+  },
+  "output_manifest_sha256": "a8f96aaa98fe90b84e897e5505af02bf2e957d7cd3f95afec1a089f99db3faa8",
+  "script_sha256": "29dd853685e57e5e405e86db02018f132ceee4654431ba3c8fb251ff6e51da4a",
+  "results": [
+    {
+      "hours_before_target": 1,
+      "target_rows": 7992493,
+      "available_history_rows": 7984805,
+      "missing_history_rows": 7688,
+      "available_percent": 99.9,
+      "available_history_that_is_zero": 469359
+    },
+    {
+      "hours_before_target": 24,
+      "target_rows": 7992493,
+      "available_history_rows": 7933975,
+      "missing_history_rows": 58518,
+      "available_percent": 99.27,
+      "available_history_that_is_zero": 469098
+    },
+    {
+      "hours_before_target": 168,
+      "target_rows": 7992493,
+      "available_history_rows": 7706058,
+      "missing_history_rows": 286435,
+      "available_percent": 96.42,
+      "available_history_that_is_zero": 465166
+    }
+  ]
+}
