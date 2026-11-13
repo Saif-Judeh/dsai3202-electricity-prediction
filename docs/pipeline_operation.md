@@ -48,8 +48,8 @@ pipeline_test_*.json, and the established component reports. Large data stays ou
 Git. A pipeline report records the starting Git commit and dirty-state flag; new files
 should be committed after validation, and the final submitted commit must be recorded.
 
-The complete real pipeline and Azure feature publication must be executed by the
-student; local offline test success is not substituted for those integration results.
-README_DRAFT.md is intentionally a draft until actual new report paths, repository
-access, final commit and team contribution details are supplied. When promoting it to
-the repository root, adjust relative document links from sibling filenames to docs/.
+The complete real pipeline passed 13 stages, followed by a safe data-stage rerun
+that passed 8 stages. Feature publication uploaded 5 objects on the first run and
+verified/skipped all 5 on the rerun. See the repository-root README.md for the exact
+evidence links, shared team contributions and submission instructions. These live VM
+results are separate from the offline synthetic tests.

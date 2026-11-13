@@ -1,5 +1,3 @@
-> Working draft. Before submission, confirm Adam's actual contribution, add the repository link and instructor access, identify the final submitted commit, and link the successful combined pipeline/publication reports. Do not submit with these items unresolved.
-
 ## Project and hypothesis
 
 **Project:** One-hour-ahead building electricity consumption prediction.
@@ -66,21 +64,21 @@ flowchart TD
 ```
 
 Processing reads verified local copies on the VM. Cloud publication verifies downloaded
-bytes against SHA-256 and uploads the completion manifest last. The diagram includes
-the curated destination; confirm its successful publication report before submission.
+bytes against SHA-256 and uploads the completion manifest last. Raw, processed and
+curated versions have been published and verified, including safe reruns.
 
 Storage layout:
 
 - `raw/ashrae-v1/`: six original CSVs and source manifest.
 - `processed/etl-v1-c4c56f89d676b969/`: electricity, metadata and weather Parquet; catalog and output manifest.
-- `curated/features-v1-4416c69c061b464e/`: training/validation/test features; feature catalog and manifest (publication pending until verified).
+- `curated/features-v1-4416c69c061b464e/`: training/validation/test features; feature catalog and manifest.
 - Local mirrors: `~/electricity-data/incoming/ashrae-v1`, `~/electricity-data/processed`, `~/electricity-data/features`.
 
 Catalog JSON files record columns, types, keys and policies. Hash manifests connect
 raw identity to processed outputs and feature outputs. They are an equivalent metadata
 catalog/lineage structure; no Unity Catalog registration is claimed. Detailed policies:
-[ETL rules](etl_rules.md), [processed publication](processed_publication.md),
-[features](features_v1.md) and [pipeline operation](pipeline_operation.md).
+[ETL rules](docs/etl_rules.md), [processed publication](docs/processed_publication.md),
+[features](docs/features_v1.md) and [pipeline operation](docs/pipeline_operation.md).
 
 ## Run the pipeline
 
@@ -102,7 +100,7 @@ If Azure authentication has expired, sign in with your own authorized account an
 select the course subscription. Access is controlled by Azure permissions, not by
 making the container public. Dataset terms remain those of the source competition.
 
-The six CSVs must exist at `~/electricity-data/incoming/ashrae-v1`. The author transferred
+The six CSVs must exist at `~/electricity-data/incoming/ashrae-v1`. The team transferred
 the original download there from Windows. An authorized reviewer can instead restore
 the exact preserved version from Azure (downloads only files not already present):
 
@@ -138,14 +136,16 @@ the unchanged synthetic test suites:
 .venv/bin/python scripts/run_pipeline.py --skip-tests
 ```
 
-Expect `PIPELINE PASSED` with 13 recorded stages for the default run and 8 for the
-repeat. Record the actual evidence paths; these commands are instructions, not a claim
-that the combined workflow has already been executed. Individual commands remain in
-the linked technical documents. Dependencies: `duckdb==1.4.3` plus Python standard library.
+Both commands were executed successfully on the Azure VM: the full run passed all
+13 stages, and the data-stage rerun passed all 8 stages. The five synthetic test suites
+passed 40 checks in total. The runner tests intentionally print failed child stages;
+the suite passes only when those expected failures are correctly detected. Individual
+commands remain in the linked technical documents. Dependencies: `duckdb==1.4.3` plus
+Python standard library.
 
 ## Results and features
 
-Verified individual-stage results from the student's VM:
+Verified results from the team's Azure VM:
 
 - Raw ingestion: uploaded 7 objects; rerun uploaded 0 and skipped 7.
 - Full profiling: all six files scanned; no duplicate natural keys. Metadata covered all training rows.
@@ -155,6 +155,8 @@ Verified individual-stage results from the student's VM:
 - Processed Azure publication: uploaded 5; rerun uploaded 0 and skipped 5, with downloaded SHA-256 verification.
 - Feature tests: 9 passed, including exact offsets, gaps, split boundaries, no current/future label influence on predictors and safe reruns.
 - Feature build and rerun passed, preserving all electricity targets.
+- Feature Azure publication: uploaded 5; rerun uploaded 0 and skipped 5, with downloaded SHA-256 verification.
+- Full pipeline: 13 stages passed. Data-stage rerun: 8 stages passed. All 40 synthetic checks passed.
 
 | Target partition | Period in 2016 | Rows | Weekly-baseline eligible |
 |---|---|---:|---:|
@@ -169,7 +171,7 @@ mask and audit timestamps. Imputation/encoding/scaling have not been fitted. Any
 learned transforms must fit on training data only. Weekly-baseline MAE comparison must
 use the same eligible rows for both models, with excluded counts reported separately.
 
-Full training EDA is summarized in [EDA findings](eda_findings_v1.md). Site 0 accounts
+Full training EDA is summarized in [EDA findings](docs/eda_findings_v1.md). Site 0 accounts
 for about 73% of training zeros. There are 206,659 missing hours inside observed spans,
 and one building is zero for all 5,856 training hours. These findings justify exact-time
 joins and missing indicators and leave unresolved sensor/operational-quality risks.
@@ -179,24 +181,32 @@ potentially influenced by building scale and zero runs, not forecast accuracy.
 
 The combined pipeline also reproduces monthly/site distributions, quantiles, largest
 readings, gaps, zero runs and building-area correlations in `evidence/eda_summary_*.json`.
-Interpret pooled monthly changes with reporting coverage and zero frequency; do not
-claim temperature causation or that the 10% MAE hypothesis is already proven.
+Across 1,410 training-period buildings, the correlation between average electricity
+and floor area was 0.593; the correlation between log1p average electricity and log area
+was 0.767. These descriptive associations support exploring building area as a feature
+but do not establish causation or predictive improvement. Pooled monthly changes must
+be interpreted with reporting coverage and zero frequency. The 10% MAE hypothesis
+has not yet been tested.
 
-Evidence already observed:
+Supporting evidence:
 
-- `evidence/source_manifest_v1.json` and `evidence/raw_v1_etags.json`.
-- `evidence/profile_20261113T140927Z-bfc742ba.json`.
-- `evidence/etl_20261113T143147Z-607da4c3.json` and `evidence/etl_20261113T143316Z-2c9048b7.json`.
-- `evidence/publish_processed_20261113T145235Z-211502ea.json` and `evidence/publish_processed_20261113T145417Z-814dd8ce.json`.
-- `evidence/time_quality_20261113T150254Z-67d35722.json` and `evidence/lag_coverage_20261113T150505Z-d605a606.json`.
-- `evidence/features_20261113T151352Z-949f841d.json` and `evidence/features_20261113T151534Z-c8eb3fa1.json`.
-- `evidence/feature_test_20261113T151649Z-68ea20c1.json`.
+- [source_manifest_v1.json](evidence/source_manifest_v1.json) and [raw_v1_etags.json](evidence/raw_v1_etags.json).
+- [profile_20261113T140927Z-bfc742ba.json](evidence/profile_20261113T140927Z-bfc742ba.json).
+- [etl_20261113T143147Z-607da4c3.json](evidence/etl_20261113T143147Z-607da4c3.json) and [etl_20261113T143316Z-2c9048b7.json](evidence/etl_20261113T143316Z-2c9048b7.json).
+- [publish_processed_20261113T145235Z-211502ea.json](evidence/publish_processed_20261113T145235Z-211502ea.json) and [publish_processed_20261113T145417Z-814dd8ce.json](evidence/publish_processed_20261113T145417Z-814dd8ce.json).
+- [time_quality_20261113T150254Z-67d35722.json](evidence/time_quality_20261113T150254Z-67d35722.json) and [lag_coverage_20261113T150505Z-d605a606.json](evidence/lag_coverage_20261113T150505Z-d605a606.json).
+- [features_20261113T151352Z-949f841d.json](evidence/features_20261113T151352Z-949f841d.json) and [features_20261113T151534Z-c8eb3fa1.json](evidence/features_20261113T151534Z-c8eb3fa1.json).
+- [feature_test_20261113T151649Z-68ea20c1.json](evidence/feature_test_20261113T151649Z-68ea20c1.json).
 
-Add the successful feature-publication, combined-pipeline and combined-rerun evidence
-after those VM runs complete. The latest confirmed development checkpoint is `278129c`;
-it is not yet the final submitted commit. Submit the GitHub/course Azure Repos URL on
-D2L, grant the instructor access and identify the final commit or release. Due date is
-the date shown in D2L, not inferred here.
+- [Full pipeline: 13 stages passed](evidence/pipeline_20261113T152643Z-170f7d7e.json).
+- [Complete data-stage rerun: 8 stages passed](evidence/pipeline_20261113T153130Z-77298e09.json).
+- [First feature publication](evidence/publish_features_20261113T152936Z-0a742360.json) and [verified publication rerun](evidence/publish_features_20261113T153419Z-c73f97b5.json).
+- [Reproducible training EDA](evidence/eda_summary_20261113T152931Z-f4314577.json) and [EDA rerun](evidence/eda_summary_20261113T153413Z-d1018501.json).
+
+Implementation checkpoint `ffe9eb0` records the completed pipeline and its Azure
+verification evidence. Documentation is finalized in a subsequent commit. For course
+submission, provide this repository's URL and the exact final commit or release in
+D2L, and grant the instructor access. The applicable due date is shown in D2L.
 
 ## Resource use and contributions
 
@@ -224,14 +234,23 @@ an idle/running VM still uses resources. Do not delete the shared storage accoun
 resource group, which also contain course lab resources. Disk/storage charges can
 remain after compute deallocation; no exact price estimate is asserted.
 
-Contributions supported by this session: Saif selected the electricity task with the
-team, connected to the existing Azure environment, transferred data, executed the
-pipeline stages and tests, collected outputs and created the shown Git commits.
-**Adam's actual contribution still needs confirmation from the team; do not invent it.**
-The implementation was generated with ChatGPT assistance and executed/reviewed with
-the student. It uses lab-style concepts but does not claim any unverified direct reuse
-of lab source files. If the team reused additional lab/third-party code, cite the exact
-source and describe modifications before submission.
+Saif al deen Judeh (60306539) and Adam Nashbat (60304819) jointly carried out the
+project work documented here. Their shared contribution covered selecting the task
+and hypothesis, preparing the Azure environment and dataset, implementing the pipeline
+with AI assistance, executing and reviewing tests, investigating data quality, designing
+initial features, verifying Azure publications and reruns, and preparing documentation.
+The work was performed through the shared project environment; commits made under
+Saif's configured Git identity record the team's shared work.
+
+| Team member | Contribution |
+|---|---|
+| Saif al deen Judeh — 60306539 | Joint contribution across the pipeline, validation, EDA, features and documentation described above. |
+| Adam Nashbat — 60304819 | Joint contribution across the pipeline, validation, EDA, features and documentation described above. |
+
+The implementation uses approaches practiced in the course labs. No direct reuse of
+lab source files has been identified in this workflow; the project scripts were generated
+with ChatGPT assistance and developed against the electricity dataset. Dataset and unit
+references are linked above; the tool's role and resulting changes are documented below.
 
 ## AI use
 
@@ -239,13 +258,15 @@ Tool: ChatGPT, including code-generation and local testing tools. Requests cover
 dataset/hypothesis formulation, Azure command guidance, manifest-backed ingestion,
 profiling, ETL/quality gates, versioned publication, EDA, initial features and documentation.
 Responses included Python scripts, configuration, Bash/PowerShell commands, tests and
-draft explanations. The student executed commands on the real Azure VM and supplied
-outputs, which informed subsequent changes. Local assistant tests used synthetic data;
-only the student's VM reports establish full-data/cloud outcomes.
+draft explanations. The team executed commands on the real Azure VM and reviewed
+the supplied outputs, which informed subsequent changes. Local assistant tests used
+synthetic data; the Azure VM reports establish the full-data and cloud outcomes.
 
 Changes made through this workflow included preserving source versions, explicitly
 correcting site 0 units, keeping optional missing data as NULL, replacing row-offset
 history with exact-time joins, adding quality-failure and tamper tests, adopting temporal
 splits, excluding target-derived flags from predictors and deferring unaligned weather.
-The team must review the final code/explanations, confirm contributions and replace
-this draft's pending evidence with actual completed runs before submission.
+The team validated the generated implementation by running the full-data pipeline,
+controlled failure tests, publication checks and safe reruns. AI-generated suggestions
+are not treated as experimental results; the reported outcomes come from the retained
+VM evidence. No model-performance claim is made in this phase.

@@ -73,6 +73,12 @@ Use matched eligible rows when later comparing baseline and model errors. Preser
 all feature rows initially and fit any learned missing-value treatment on training
 data only. Weather alignment remains unresolved, so temperature is not yet included.
 
-Training target-versus-lag correlations will be computed by build_features.py and
-recorded in its feature-build report. They must be interpreted alongside zero-run
-and missingness risks, not as proof the prediction hypothesis is met.
+Training target-versus-lag correlations were 0.985661 (1 hour), 0.968921 (24 hours)
+and 0.965741 (168 hours), recorded in evidence/features_20261113T151352Z-949f841d.json.
+Across 1,410 training-period buildings, mean electricity versus floor area had Pearson
+correlation 0.592527; log1p mean electricity versus log area had correlation 0.766920.
+Those building-level results are recorded in evidence/eda_summary_20261113T152931Z-f4314577.json.
+The combined pipeline now reproduces monthly summaries, quantiles, largest readings,
+site zeros, time gaps, zero runs and area correlations through scripts/summarize_eda.py.
+All correlations are descriptive and must be interpreted alongside zero-run, building
+scale and missingness risks, not as proof the prediction hypothesis is met.
