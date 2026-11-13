@@ -1,0 +1,510 @@
+{
+  "checks": [
+    {
+      "etl_report": {
+        "action": "published_local",
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.188,
+        "electricity_summary": {
+          "buildings": 2,
+          "converted_site_0_rows": 2,
+          "first_timestamp": "2016-01-01 00:00:00",
+          "last_timestamp": "2016-01-01 01:00:00",
+          "rows": 3,
+          "zero_rows": 1
+        },
+        "files": [
+          {
+            "file_name": "building_metadata.parquet",
+            "sha256": "a02595216a683366f70c30c801db6e740d63b1c79fc0ae8fbb65689361b0fd20",
+            "size_bytes": 979
+          },
+          {
+            "file_name": "catalog.json",
+            "sha256": "c8f9d7158c5f56f6893ac93c3fae19ebbb44794cca426ab5569061152395a7d9",
+            "size_bytes": 3510
+          },
+          {
+            "file_name": "electricity.parquet",
+            "sha256": "febc0d5d8aeca36dd9536fc1a37c22e3e21cde59e25a9b246128f81e2f1b427d",
+            "size_bytes": 1236
+          },
+          {
+            "file_name": "weather_train.parquet",
+            "sha256": "3abc4edf9904e5bddc625f9816e4d8a77b82a13923e6c9dfb4cf3c6f12a6ad6d",
+            "size_bytes": 1416
+          }
+        ],
+        "gates_passed": true,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "309a773f156b46e184d7ead874cbe318fe8f87ac4b6c9b570721bc6e462b7fee"
+        },
+        "output_bytes": 7141,
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-12d26ad95373beda",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 85.17,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 3,
+            "excluded_rows": 1,
+            "input_rows": 4,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "weather_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          }
+        },
+        "run_id": "20261113T143138Z-5a78049d",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/good/source",
+        "status": "passed"
+      },
+      "status": "passed",
+      "test": "valid_fixture_conversion_zeros_nulls_accounting"
+    },
+    {
+      "etl_report": {
+        "action": "skipped_verified",
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.002,
+        "files": [
+          {
+            "file_name": "building_metadata.parquet",
+            "sha256": "a02595216a683366f70c30c801db6e740d63b1c79fc0ae8fbb65689361b0fd20",
+            "size_bytes": 979
+          },
+          {
+            "file_name": "catalog.json",
+            "sha256": "c8f9d7158c5f56f6893ac93c3fae19ebbb44794cca426ab5569061152395a7d9",
+            "size_bytes": 3510
+          },
+          {
+            "file_name": "electricity.parquet",
+            "sha256": "febc0d5d8aeca36dd9536fc1a37c22e3e21cde59e25a9b246128f81e2f1b427d",
+            "size_bytes": 1236
+          },
+          {
+            "file_name": "weather_train.parquet",
+            "sha256": "3abc4edf9904e5bddc625f9816e4d8a77b82a13923e6c9dfb4cf3c6f12a6ad6d",
+            "size_bytes": 1416
+          }
+        ],
+        "gates_passed": true,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "309a773f156b46e184d7ead874cbe318fe8f87ac4b6c9b570721bc6e462b7fee"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-12d26ad95373beda",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 59.87,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 3,
+            "excluded_rows": 1,
+            "input_rows": 4,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "weather_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          }
+        },
+        "run_id": "20261113T143138Z-6df5765f",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/good/source",
+        "status": "passed"
+      },
+      "status": "passed",
+      "test": "safe_rerun_and_raw_preservation"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.136,
+        "error": "electricity_checked: 1 rejected rows exceed limit 0.",
+        "error_type": "QualityFailure",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "0577966f0fe4400fdb3eeb022d8a8b17a36cbf912901b0e66346b8899a18351b"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-204f686b14202504",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 81.04,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 3,
+            "excluded_rows": 1,
+            "input_rows": 5,
+            "quarantine_path": "/tmp/electricity-etl-quality-vj2aggsa/processed/_rejected/20261113T143138Z-8fe16213/electricity_checked.parquet",
+            "rejected_rows": 1,
+            "rejection_reasons": {
+              "invalid_reading": 1
+            }
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          }
+        },
+        "run_id": "20261113T143138Z-8fe16213",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/negative/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "negative_blocks_publication"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.12,
+        "error": "electricity_checked: 2 rejected rows exceed limit 0.",
+        "error_type": "QualityFailure",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "7320389ad6e7b274327f5fd7bd5ec12f05d76b04d67820b6697afa6ad1ca6f1f"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-e7a31be49a3a34f6",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 82.8,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 1,
+            "input_rows": 5,
+            "quarantine_path": "/tmp/electricity-etl-quality-vj2aggsa/processed/_rejected/20261113T143138Z-be0372c7/electricity_checked.parquet",
+            "rejected_rows": 2,
+            "rejection_reasons": {
+              "duplicate_electricity_key": 2
+            }
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          }
+        },
+        "run_id": "20261113T143138Z-be0372c7",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/duplicate/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "duplicate_blocks_publication"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.12,
+        "error": "electricity_checked: 1 rejected rows exceed limit 0.",
+        "error_type": "QualityFailure",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "60daae9bb92cf2c0073746a843cc2f955d3d0b4479dd5c1246958ceb7b87091d"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-73db203306a26a0f",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 82.95,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 3,
+            "excluded_rows": 1,
+            "input_rows": 5,
+            "quarantine_path": "/tmp/electricity-etl-quality-vj2aggsa/processed/_rejected/20261113T143139Z-7a7bdfa1/electricity_checked.parquet",
+            "rejected_rows": 1,
+            "rejection_reasons": {
+              "invalid_building_id": 1
+            }
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          }
+        },
+        "run_id": "20261113T143139Z-7a7bdfa1",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/fractional_id/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "fractional_id_blocks_publication"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.16,
+        "error": "weather_checked: 1 rejected rows exceed limit 0.",
+        "error_type": "QualityFailure",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "d5c1513dac90b1ebdab392bc4ffcca64a18db7c6a9e1a28db1c0f27d29f4d9d5"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-7214630b4245b35c",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 83.83,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "electricity_checked": {
+            "accepted_rows": 3,
+            "excluded_rows": 1,
+            "input_rows": 4,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "metadata_checked": {
+            "accepted_rows": 2,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "rejected_rows": 0,
+            "rejection_reasons": {}
+          },
+          "weather_checked": {
+            "accepted_rows": 1,
+            "excluded_rows": 0,
+            "input_rows": 2,
+            "quarantine_path": "/tmp/electricity-etl-quality-vj2aggsa/processed/_rejected/20261113T143139Z-4bba72a0/weather_checked.parquet",
+            "rejected_rows": 1,
+            "rejection_reasons": {
+              "invalid_weather_number": 1
+            }
+          }
+        },
+        "run_id": "20261113T143139Z-4bba72a0",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/invalid_weather/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "invalid_weather_blocks_publication"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.1,
+        "error": "metadata_checked: 2 rejected rows exceed limit 0.",
+        "error_type": "QualityFailure",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "4fab2b0f07d110f786aaeef8a955d6ceb009c0291f07c9555ba0f8c992ceffe2"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-9d3da3d1328ab9f9",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 78.74,
+        "python_version": "3.12.3",
+        "row_accounting": {
+          "metadata_checked": {
+            "accepted_rows": 1,
+            "excluded_rows": 0,
+            "input_rows": 3,
+            "quarantine_path": "/tmp/electricity-etl-quality-vj2aggsa/processed/_rejected/20261113T143139Z-3436babc/metadata_checked.parquet",
+            "rejected_rows": 2,
+            "rejection_reasons": {
+              "duplicate_building_id": 2
+            }
+          }
+        },
+        "run_id": "20261113T143139Z-3436babc",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/duplicate_metadata/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "duplicate_metadata_blocks_publication"
+    },
+    {
+      "etl_report": {
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.001,
+        "error": "Source identity mismatch: train.csv",
+        "error_type": "RuntimeError",
+        "gates_passed": false,
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 59.87,
+        "python_version": "3.12.3",
+        "row_accounting": {},
+        "run_id": "20261113T143139Z-d74db710",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/changed/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "changed_source_blocked"
+    },
+    {
+      "etl_report": {
+        "config": {
+          "maximum_rejected_rows_per_table": 0,
+          "memory_limit": "6GB",
+          "minimum_electricity_rows": 1,
+          "pipeline_version": "electricity-etl-v1",
+          "required_duckdb_version": "1.4.3",
+          "site_0_kbtu_to_kwh": 0.29307107,
+          "source_version": "ashrae-v1",
+          "threads": 2,
+          "timestamp_end_exclusive": "2017-01-01 00:00:00",
+          "timestamp_start": "2016-01-01 00:00:00"
+        },
+        "duckdb_version": "1.4.3",
+        "elapsed_seconds": 0.002,
+        "error": "Existing output verification failed: electricity.parquet",
+        "error_type": "RuntimeError",
+        "gates_passed": false,
+        "identity": {
+          "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+          "duckdb_version": "1.4.3",
+          "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+          "source_manifest_sha256": "309a773f156b46e184d7ead874cbe318fe8f87ac4b6c9b570721bc6e462b7fee"
+        },
+        "output_directory": "/tmp/electricity-etl-quality-vj2aggsa/processed/etl-v1-12d26ad95373beda",
+        "output_root": "/tmp/electricity-etl-quality-vj2aggsa/processed",
+        "peak_process_rss_mib": 59.87,
+        "python_version": "3.12.3",
+        "row_accounting": {},
+        "run_id": "20261113T143140Z-54b373d3",
+        "source_directory": "/tmp/electricity-etl-quality-vj2aggsa/good/source",
+        "status": "failed"
+      },
+      "status": "passed",
+      "test": "changed_output_blocked"
+    }
+  ],
+  "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+  "elapsed_seconds": 2.034,
+  "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+  "scope": "isolated synthetic fixtures only",
+  "status": "passed",
+  "temporary_test_data_removed": true,
+  "test_code_sha256": "7d391288c6f570b7ce08be6928d9067d094e1267e1c5f1d1e097b1d433f34c5f"
+}
