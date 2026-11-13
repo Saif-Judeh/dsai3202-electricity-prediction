@@ -1,0 +1,8 @@
+SKIPPED: feature_manifest.json | downloaded SHA-256 verified
+SKIPPED: feature_catalog.json | downloaded SHA-256 verified
+SKIPPED: test.parquet | downloaded SHA-256 verified
+SKIPPED: train.parquet | downloaded SHA-256 verified
+SKIPPED: validation.parquet | downloaded SHA-256 verified
+PASS: uploaded=0, skipped=5; feature manifest verified.
+Destination: https://amazonlake60306539.blob.core.windows.net/electricity-project/curated/features-v1-4416c69c061b464e/
+Evidence: /home/azureuser/electricity-project/evidence/publish_features_20261113T153419Z-c73f97b5.json

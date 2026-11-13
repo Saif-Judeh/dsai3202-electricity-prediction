@@ -1,0 +1,12 @@
+UPLOADING: feature_catalog.json
+UPLOADED: feature_catalog.json | downloaded SHA-256 verified
+UPLOADING: test.parquet
+UPLOADED: test.parquet | downloaded SHA-256 verified
+UPLOADING: train.parquet
+UPLOADED: train.parquet | downloaded SHA-256 verified
+UPLOADING: validation.parquet
+UPLOADED: validation.parquet | downloaded SHA-256 verified
+UPLOADING completion manifest: feature_manifest.json
+PASS: uploaded=5, skipped=0; feature manifest verified.
+Destination: https://amazonlake60306539.blob.core.windows.net/electricity-project/curated/features-v1-4416c69c061b464e/
+Evidence: /home/azureuser/electricity-project/evidence/publish_features_20261113T152936Z-0a742360.json

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "offline synthetic child stages",
+  "checks": [
+    {
+      "test": "success",
+      "status": "passed"
+    },
+    {
+      "test": "exit_failure",
+      "status": "passed"
+    },
+    {
+      "test": "report_failure",
+      "status": "passed"
+    },
+    {
+      "test": "missing_report",
+      "status": "passed"
+    }
+  ]
+}

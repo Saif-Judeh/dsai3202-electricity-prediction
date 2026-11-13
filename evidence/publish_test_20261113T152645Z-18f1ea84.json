@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "status": "passed",
+      "test": "first_upload_and_manifest_last"
+    },
+    {
+      "status": "passed",
+      "test": "verified_rerun_without_writes"
+    },
+    {
+      "status": "passed",
+      "test": "remote_bytes_checked_not_just_metadata"
+    },
+    {
+      "status": "passed",
+      "test": "etag_change_blocks_rerun"
+    },
+    {
+      "status": "passed",
+      "test": "missing_committed_asset_not_repaired"
+    },
+    {
+      "status": "passed",
+      "test": "local_tampering_blocks_all_cloud_calls"
+    },
+    {
+      "status": "passed",
+      "test": "failed_quality_gate_blocks_all_cloud_calls"
+    },
+    {
+      "status": "passed",
+      "test": "provenance_mismatch_blocks_all_cloud_calls"
+    },
+    {
+      "status": "passed",
+      "test": "interruption_blocks_marker_and_resume_verifies_existing"
+    },
+    {
+      "status": "passed",
+      "test": "partial_conflict_detected_before_any_new_upload"
+    }
+  ],
+  "publisher_code_sha256": "658003d02b276a8e401a6f8d1913cb7e095a3d5b5cd948b159cff475445e9f3f",
+  "scope": "offline synthetic files and in-memory Azure substitute; not live Azure",
+  "status": "passed",
+  "temporary_data_removed": true,
+  "test_code_sha256": "55d502d04037b47408a91f87a9e2068e77929b7b661f17b85d0dbe6a13c1e562"
+}

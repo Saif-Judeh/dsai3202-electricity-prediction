@@ -1,0 +1,15 @@
+
+START: success
+ok
+STAGE PASSED: success
+
+START: exit_failure
+STAGE FAILED: exit_failure
+
+START: report_failure
+STAGE FAILED: report_failure
+
+START: missing_report
+no evidence written
+STAGE FAILED: missing_report
+PASSED: 4 runner checks; evidence: /home/azureuser/electricity-project/evidence/pipeline_test_20261113T152643Z-138a631c.json

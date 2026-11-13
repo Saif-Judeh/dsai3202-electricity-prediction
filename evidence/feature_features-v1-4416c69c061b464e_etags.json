@@ -1,0 +1,31 @@
+{
+  "destination": "https://amazonlake60306539.blob.core.windows.net/electricity-project/curated/features-v1-4416c69c061b464e/",
+  "files": {
+    "feature_catalog.json": {
+      "etag": "\"0x8DF419AF049804C\"",
+      "sha256": "e08cc3b988dfc6c75669cf1864845b7d9014b8f5037918a0f16e07988c6a6f7e",
+      "size_bytes": 11137
+    },
+    "feature_manifest.json": {
+      "etag": "\"0x8DF419AFC473974\"",
+      "sha256": "c6b834e6b7b6e64a5d9a44e8253c75d7da926e0bf1f807305549f31607724519",
+      "size_bytes": 5031
+    },
+    "test.parquet": {
+      "etag": "\"0x8DF419AF2545AE0\"",
+      "sha256": "27f9a9ea9a5ce6943bcf4b6ffda1b8c899d7972d2275944982ae2ec05ed955a7",
+      "size_bytes": 22918819
+    },
+    "train.parquet": {
+      "etag": "\"0x8DF419AF5174E64\"",
+      "sha256": "8f70d7f6a898e61089577a9a20176bd35543bbb374c970153dbc8b546220de2e",
+      "size_bytes": 103858941
+    },
+    "validation.parquet": {
+      "etag": "\"0x8DF419AF83116FC\"",
+      "sha256": "152bca41e8e9392f699e7cf02a39e53cdaeccf56d389caefb68bc27c333f9a16",
+      "size_bytes": 22811373
+    }
+  },
+  "manifest_sha256": "c6b834e6b7b6e64a5d9a44e8253c75d7da926e0bf1f807305549f31607724519"
+}

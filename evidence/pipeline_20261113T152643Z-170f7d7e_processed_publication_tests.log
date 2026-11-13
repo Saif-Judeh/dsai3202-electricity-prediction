@@ -1,0 +1,11 @@
+PASS: first_upload_and_manifest_last
+PASS: verified_rerun_without_writes
+PASS: remote_bytes_checked_not_just_metadata
+PASS: etag_change_blocks_rerun
+PASS: missing_committed_asset_not_repaired
+PASS: local_tampering_blocks_all_cloud_calls
+PASS: failed_quality_gate_blocks_all_cloud_calls
+PASS: provenance_mismatch_blocks_all_cloud_calls
+PASS: interruption_blocks_marker_and_resume_verifies_existing
+PASS: partial_conflict_detected_before_any_new_upload
+PASSED: 10 checks; evidence: /home/azureuser/electricity-project/evidence/publish_test_20261113T152645Z-18f1ea84.json

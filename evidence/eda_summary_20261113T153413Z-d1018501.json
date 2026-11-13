@@ -1,0 +1,414 @@
+{
+  "elapsed_seconds": 4.942,
+  "processed_identity": {
+    "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+    "duckdb_version": "1.4.3",
+    "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+    "source_manifest_sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0"
+  },
+  "results": {
+    "building_area_correlation": [
+      {
+        "buildings": 1410,
+        "log1p_mean_kwh_vs_log_area": 0.7669198249871249,
+        "mean_kwh_vs_area": 0.5925265914373172
+      }
+    ],
+    "distribution": [
+      {
+        "buildings": 1410,
+        "max_kwh": 44336.5,
+        "min_kwh": 0.0,
+        "p25_p50_p75_p95_p99": [
+          17.9167,
+          58.0,
+          154.6,
+          592.9975999999978,
+          1544.0516000000014
+        ],
+        "rows": 7992493,
+        "zero_rows": 471058
+      }
+    ],
+    "largest_readings": [
+      {
+        "building_id": 1168,
+        "meter_reading_kwh": 44336.5,
+        "site_id": 13,
+        "timestamp_reported": "2016-03-30 09:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 29431.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-01-20 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 25275.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-26 01:00:00"
+      },
+      {
+        "building_id": 904,
+        "meter_reading_kwh": 21579.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-19 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 19511.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-07-02 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 19511.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-07-03 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 19511.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-07-04 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 19511.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-07-05 01:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 18412.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-01-26 14:00:00"
+      },
+      {
+        "building_id": 1168,
+        "meter_reading_kwh": 16848.9,
+        "site_id": 13,
+        "timestamp_reported": "2016-03-26 04:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 16566.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-26 08:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 13870.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-24 11:00:00"
+      },
+      {
+        "building_id": 927,
+        "meter_reading_kwh": 12571.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-26 08:00:00"
+      },
+      {
+        "building_id": 881,
+        "meter_reading_kwh": 11624.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-26 08:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 11369.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-03-30 10:00:00"
+      },
+      {
+        "building_id": 955,
+        "meter_reading_kwh": 10958.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-02-24 11:00:00"
+      },
+      {
+        "building_id": 993,
+        "meter_reading_kwh": 10897.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-01-26 01:00:00"
+      },
+      {
+        "building_id": 921,
+        "meter_reading_kwh": 10725.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-03-30 01:00:00"
+      },
+      {
+        "building_id": 983,
+        "meter_reading_kwh": 10295.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-08-23 00:00:00"
+      },
+      {
+        "building_id": 927,
+        "meter_reading_kwh": 10286.0,
+        "site_id": 9,
+        "timestamp_reported": "2016-07-02 01:00:00"
+      }
+    ],
+    "longest_zero_runs": [
+      {
+        "building_id": 1221,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-08-31 23:00:00",
+        "site_id": 13,
+        "zero_hours": 5856
+      },
+      {
+        "building_id": 1169,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-08-03 15:00:00",
+        "site_id": 13,
+        "zero_hours": 5176
+      },
+      {
+        "building_id": 1113,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-07-27 10:00:00",
+        "site_id": 13,
+        "zero_hours": 5003
+      },
+      {
+        "building_id": 802,
+        "first_timestamp": "2016-03-18 13:00:00",
+        "last_timestamp": "2016-08-23 07:00:00",
+        "site_id": 7,
+        "zero_hours": 3787
+      },
+      {
+        "building_id": 1345,
+        "first_timestamp": "2016-03-29 22:00:00",
+        "last_timestamp": "2016-08-31 23:00:00",
+        "site_id": 15,
+        "zero_hours": 3722
+      },
+      {
+        "building_id": 954,
+        "first_timestamp": "2016-03-13 04:00:00",
+        "last_timestamp": "2016-08-08 10:00:00",
+        "site_id": 9,
+        "zero_hours": 3559
+      },
+      {
+        "building_id": 3,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "site_id": 0,
+        "zero_hours": 2923
+      },
+      {
+        "building_id": 6,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "site_id": 0,
+        "zero_hours": 2923
+      },
+      {
+        "building_id": 7,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "site_id": 0,
+        "zero_hours": 2923
+      },
+      {
+        "building_id": 8,
+        "first_timestamp": "2016-01-01 00:00:00",
+        "last_timestamp": "2016-05-01 18:00:00",
+        "site_id": 0,
+        "zero_hours": 2923
+      }
+    ],
+    "monthly": [
+      {
+        "buildings": 1397,
+        "mean_kwh": 149.26,
+        "median_kwh": 54.19,
+        "month": "2016-01",
+        "readings": 1031063,
+        "zero_percent": 9.09
+      },
+      {
+        "buildings": 1398,
+        "mean_kwh": 154.93,
+        "median_kwh": 55.88,
+        "month": "2016-02",
+        "readings": 915638,
+        "zero_percent": 9.42
+      },
+      {
+        "buildings": 1400,
+        "mean_kwh": 149.3,
+        "median_kwh": 51.46,
+        "month": "2016-03",
+        "readings": 958324,
+        "zero_percent": 9.23
+      },
+      {
+        "buildings": 1399,
+        "mean_kwh": 148.42,
+        "median_kwh": 53.0,
+        "month": "2016-04",
+        "readings": 1001113,
+        "zero_percent": 8.41
+      },
+      {
+        "buildings": 1402,
+        "mean_kwh": 151.39,
+        "median_kwh": 54.0,
+        "month": "2016-05",
+        "readings": 1033147,
+        "zero_percent": 5.96
+      },
+      {
+        "buildings": 1400,
+        "mean_kwh": 165.34,
+        "median_kwh": 61.87,
+        "month": "2016-06",
+        "readings": 1001261,
+        "zero_percent": 1.57
+      },
+      {
+        "buildings": 1401,
+        "mean_kwh": 169.59,
+        "median_kwh": 64.0,
+        "month": "2016-07",
+        "readings": 1027852,
+        "zero_percent": 2.71
+      },
+      {
+        "buildings": 1405,
+        "mean_kwh": 174.42,
+        "median_kwh": 67.61,
+        "month": "2016-08",
+        "readings": 1024095,
+        "zero_percent": 1.29
+      }
+    ],
+    "time_gaps": [
+      {
+        "buildings_with_gaps": 965,
+        "gap_events": 6278,
+        "longest_gap_hours": 2612,
+        "missing_hours_inside_observed_spans": 206659
+      }
+    ],
+    "zero_run_summary": [
+      {
+        "buildings_with_long_runs": 336,
+        "longest_run_hours": 5856,
+        "runs": 10075,
+        "runs_at_least_24_hours": 1466
+      }
+    ],
+    "zeros_by_site": [
+      {
+        "readings": 603750,
+        "site_id": 0,
+        "zero_percent": 57.32,
+        "zero_readings": 346055
+      },
+      {
+        "readings": 712058,
+        "site_id": 9,
+        "zero_percent": 5.08,
+        "zero_readings": 36194
+      },
+      {
+        "readings": 824165,
+        "site_id": 13,
+        "zero_percent": 2.22,
+        "zero_readings": 18278
+      },
+      {
+        "readings": 593194,
+        "site_id": 14,
+        "zero_percent": 3.01,
+        "zero_readings": 17841
+      },
+      {
+        "readings": 380015,
+        "site_id": 8,
+        "zero_percent": 4.66,
+        "zero_readings": 17716
+      },
+      {
+        "readings": 69648,
+        "site_id": 7,
+        "zero_percent": 14.75,
+        "zero_readings": 10271
+      },
+      {
+        "readings": 526833,
+        "site_id": 15,
+        "zero_percent": 1.56,
+        "zero_readings": 8238
+      },
+      {
+        "readings": 521184,
+        "site_id": 5,
+        "zero_percent": 1.14,
+        "zero_readings": 5939
+      },
+      {
+        "readings": 789627,
+        "site_id": 2,
+        "zero_percent": 0.6,
+        "zero_readings": 4713
+      },
+      {
+        "readings": 484764,
+        "site_id": 4,
+        "zero_percent": 0.49,
+        "zero_readings": 2358
+      },
+      {
+        "readings": 1579303,
+        "site_id": 3,
+        "zero_percent": 0.13,
+        "zero_readings": 2009
+      },
+      {
+        "readings": 210601,
+        "site_id": 12,
+        "zero_percent": 0.54,
+        "zero_readings": 1134
+      },
+      {
+        "readings": 159648,
+        "site_id": 10,
+        "zero_percent": 0.18,
+        "zero_readings": 281
+      },
+      {
+        "readings": 210284,
+        "site_id": 6,
+        "zero_percent": 0.01,
+        "zero_readings": 31
+      },
+      {
+        "readings": 298654,
+        "site_id": 1,
+        "zero_percent": 0.0,
+        "zero_readings": 0
+      },
+      {
+        "readings": 28765,
+        "site_id": 11,
+        "zero_percent": 0.0,
+        "zero_readings": 0
+      }
+    ]
+  },
+  "run_id": "20261113T153413Z-d1018501",
+  "scope": "All training-period electricity observations; no sample",
+  "script_sha256": "a3becf2a5698350e9e9b7283e66336385d4f73bd29745cd724ca9db9d4281176",
+  "source_manifest_sha256": "a8f96aaa98fe90b84e897e5505af02bf2e957d7cd3f95afec1a089f99db3faa8",
+  "split_config_sha256": "62c3ca94d8cc8110d07e4ccb05f7d331aec2f7021c0068452e834802b88f5d1c",
+  "status": "passed"
+}

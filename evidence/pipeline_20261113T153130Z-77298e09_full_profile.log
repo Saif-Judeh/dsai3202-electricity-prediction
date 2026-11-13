@@ -1,0 +1,81 @@
+Verifying source files against the preserved manifest ...
+
+PROFILING: building_metadata.csv
+  Rows: 1,449
+  year_built: {'missing': 774}
+  floor_count: {'missing': 1094}
+  Checking duplicate keys: building_id ...
+  Duplicate groups: 0; excess rows: 0
+
+PROFILING: sample_submission.csv
+  Rows: 41,697,600
+  Checking duplicate keys: row_id ...
+  Duplicate groups: 0; excess rows: 0
+
+PROFILING: test.csv
+  Rows: 41,697,600
+  Checking duplicate keys: building_id, meter, timestamp ...
+  Duplicate groups: 0; excess rows: 0
+  Checking duplicate keys: row_id ...
+  Duplicate groups: 0; excess rows: 0
+
+PROFILING: train.csv
+  Rows: 20,216,100
+  Checking duplicate keys: building_id, meter, timestamp ...
+  Duplicate groups: 0; excess rows: 0
+
+PROFILING: weather_test.csv
+  Rows: 277,243
+  air_temperature: {'missing': 104}
+  cloud_coverage: {'missing': 140448}
+  dew_temperature: {'missing': 327}
+  precip_depth_1_hr: {'missing': 95588}
+  sea_level_pressure: {'missing': 21265}
+  wind_direction: {'missing': 12370}
+  wind_speed: {'missing': 460}
+  Checking duplicate keys: site_id, timestamp ...
+  Duplicate groups: 0; excess rows: 0
+
+PROFILING: weather_train.csv
+  Rows: 139,773
+  air_temperature: {'missing': 55}
+  cloud_coverage: {'missing': 69173}
+  dew_temperature: {'missing': 113}
+  precip_depth_1_hr: {'missing': 50289}
+  sea_level_pressure: {'missing': 10618}
+  wind_direction: {'missing': 6268}
+  wind_speed: {'missing': 304}
+  Checking duplicate keys: site_id, timestamp ...
+  Duplicate groups: 0; excess rows: 0
+
+ELECTRICITY SUMMARY (original units):
+{
+  "row_count": 12060910,
+  "building_count": 1413,
+  "first_timestamp": "2016-01-01 00:00:00",
+  "last_timestamp": "2016-12-31 23:00:00",
+  "missing_or_unparseable_readings": 0,
+  "nonfinite_readings": 0,
+  "negative_readings": 0,
+  "zero_readings": 530169,
+  "finite_nonnegative_readings": 12060910,
+  "min_valid_reading": 0.0,
+  "max_valid_reading": 79769.0,
+  "p25_p50_p75_p95_p99": [
+    19.5,
+    62.831900000000005,
+    170.075,
+    647.409549999999,
+    1629.61
+  ],
+  "units": "Original recorded units; not standardized. Do not interpret as uniformly kWh.",
+  "quantile_population": "All finite nonnegative electricity readings; exact quantiles; no sample.",
+  "zero_policy": "Reported for investigation; zero values are not automatically rejected.",
+  "duplicate_policy": "Key duplicates are reported, not removed; conflicting readings require investigation."
+}
+
+METADATA COVERAGE: {'training_rows_without_building_metadata': 0}
+
+Report saved: /home/azureuser/electricity-project/evidence/profile_20261113T153159Z-de29c05a.json
+Elapsed: 102.92 seconds; peak process RSS: 4787.02 MiB
+PASS: full collection profiled; raw files unchanged by this script.

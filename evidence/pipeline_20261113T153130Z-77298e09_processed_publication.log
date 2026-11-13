@@ -1,0 +1,8 @@
+SKIPPED: output_manifest.json | downloaded SHA-256 verified
+SKIPPED: building_metadata.parquet | downloaded SHA-256 verified
+SKIPPED: catalog.json | downloaded SHA-256 verified
+SKIPPED: electricity.parquet | downloaded SHA-256 verified
+SKIPPED: weather_train.parquet | downloaded SHA-256 verified
+PASS: uploaded=0, skipped=5; completion manifest verified.
+Destination: https://amazonlake60306539.blob.core.windows.net/electricity-project/processed/etl-v1-c4c56f89d676b969/
+Evidence: /home/azureuser/electricity-project/evidence/publish_processed_20261113T153351Z-68dfe31f.json

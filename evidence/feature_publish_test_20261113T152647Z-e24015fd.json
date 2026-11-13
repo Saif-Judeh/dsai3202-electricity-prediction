@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "status": "passed",
+      "test": "five_assets_and_manifest_last"
+    },
+    {
+      "status": "passed",
+      "test": "safe_verified_rerun"
+    },
+    {
+      "status": "passed",
+      "test": "changed_remote_bytes_blocked"
+    },
+    {
+      "status": "passed",
+      "test": "changed_remote_etag_blocked"
+    },
+    {
+      "status": "passed",
+      "test": "missing_committed_asset_not_repaired"
+    },
+    {
+      "status": "passed",
+      "test": "changed_local_feature_blocks_cloud_calls"
+    },
+    {
+      "status": "passed",
+      "test": "failed_gates_block_cloud_calls"
+    },
+    {
+      "status": "passed",
+      "test": "partial_upload_resumes_without_premature_manifest"
+    }
+  ],
+  "publisher_sha256": "2e967d105301a2e010fc9dab26c5dcfeeb18ae61f000940d932c1a1d9aff1f3f",
+  "scope": "synthetic inputs and in-memory Azure; no cloud calls",
+  "status": "passed",
+  "temporary_data_removed": true,
+  "test_sha256": "3b86881fa03fa891d5157c49f48af96f2f7f6054eddf286d22cad88df6221f65"
+}

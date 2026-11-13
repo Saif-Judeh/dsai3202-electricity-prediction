@@ -1,0 +1,4 @@
+Verifying all six source files against the preserved manifest ...
+PASS: existing ETL output verified; no files rewritten.
+Output: /home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969
+Evidence: /home/azureuser/electricity-project/evidence/etl_20261113T153342Z-6bc60bb3.json

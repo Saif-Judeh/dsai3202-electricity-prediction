@@ -1,0 +1,76 @@
+{
+  "action": "skipped_verified",
+  "config": {
+    "maximum_rejected_rows_per_table": 0,
+    "memory_limit": "6GB",
+    "minimum_electricity_rows": 1,
+    "pipeline_version": "electricity-etl-v1",
+    "required_duckdb_version": "1.4.3",
+    "site_0_kbtu_to_kwh": 0.29307107,
+    "source_version": "ashrae-v1",
+    "threads": 2,
+    "timestamp_end_exclusive": "2017-01-01 00:00:00",
+    "timestamp_start": "2016-01-01 00:00:00"
+  },
+  "duckdb_version": "1.4.3",
+  "elapsed_seconds": 9.315,
+  "files": [
+    {
+      "file_name": "building_metadata.parquet",
+      "sha256": "e5654ab213a390b3ddcb6082b48ba6c829ca17ba2efca1dd8ea4889d45f2fde9",
+      "size_bytes": 10786
+    },
+    {
+      "file_name": "catalog.json",
+      "sha256": "abe1ef833542a012facde91583fb71df8e1b7fbdc42189b878051e7af734ac66",
+      "size_bytes": 3525
+    },
+    {
+      "file_name": "electricity.parquet",
+      "sha256": "26ec5373b1a425bf646c3454034b5efa8832bcca4596a555484a62388dbc2997",
+      "size_bytes": 65548701
+    },
+    {
+      "file_name": "weather_train.parquet",
+      "sha256": "0e1a60db838bd26633da4859f349929262538f53b820582bb4c9d41c8502e82f",
+      "size_bytes": 760724
+    }
+  ],
+  "gates_passed": true,
+  "identity": {
+    "config_sha256": "26a27694f17774c3e820cb356fb0cbe1dd1d82eb36ec2a70f2b0dffb0dd173aa",
+    "duckdb_version": "1.4.3",
+    "etl_code_sha256": "4b51e6346341a4b295bfb0caacba46714833fc874579f39fa6d351497c4cf33d",
+    "source_manifest_sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0"
+  },
+  "output_directory": "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969",
+  "output_root": "/home/azureuser/electricity-data/processed",
+  "peak_process_rss_mib": 67.91,
+  "python_version": "3.12.3",
+  "row_accounting": {
+    "electricity_checked": {
+      "accepted_rows": 12060910,
+      "excluded_rows": 8155190,
+      "input_rows": 20216100,
+      "rejected_rows": 0,
+      "rejection_reasons": {}
+    },
+    "metadata_checked": {
+      "accepted_rows": 1449,
+      "excluded_rows": 0,
+      "input_rows": 1449,
+      "rejected_rows": 0,
+      "rejection_reasons": {}
+    },
+    "weather_checked": {
+      "accepted_rows": 139773,
+      "excluded_rows": 0,
+      "input_rows": 139773,
+      "rejected_rows": 0,
+      "rejection_reasons": {}
+    }
+  },
+  "run_id": "20261113T152859Z-87e3fd41",
+  "source_directory": "/home/azureuser/electricity-data/incoming/ashrae-v1",
+  "status": "passed"
+}

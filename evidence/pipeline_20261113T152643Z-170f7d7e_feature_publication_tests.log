@@ -1,0 +1,9 @@
+PASS: five_assets_and_manifest_last
+PASS: safe_verified_rerun
+PASS: changed_remote_bytes_blocked
+PASS: changed_remote_etag_blocked
+PASS: missing_committed_asset_not_repaired
+PASS: changed_local_feature_blocks_cloud_calls
+PASS: failed_gates_block_cloud_calls
+PASS: partial_upload_resumes_without_premature_manifest
+PASSED: 8 checks; evidence: /home/azureuser/electricity-project/evidence/feature_publish_test_20261113T152647Z-e24015fd.json

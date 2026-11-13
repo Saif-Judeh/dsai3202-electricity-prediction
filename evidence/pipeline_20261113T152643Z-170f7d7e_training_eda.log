@@ -1,0 +1,9 @@
+EDA: distribution
+EDA: monthly
+EDA: zeros_by_site
+EDA: time_gaps
+EDA: largest_readings
+EDA: building_area_correlation
+Building-level correlations: [{"buildings": 1410, "mean_kwh_vs_area": 0.5925265914373172, "log1p_mean_kwh_vs_log_area": 0.7669198249871247}]
+PASS: training-only EDA saved; processed inputs unchanged.
+Evidence: /home/azureuser/electricity-project/evidence/eda_summary_20261113T152931Z-f4314577.json

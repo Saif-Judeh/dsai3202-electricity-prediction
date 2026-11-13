@@ -1,0 +1,9 @@
+SKIPPED: building_metadata.csv | verified
+SKIPPED: sample_submission.csv | verified
+SKIPPED: test.csv | verified
+SKIPPED: train.csv | verified
+SKIPPED: weather_test.csv | verified
+SKIPPED: weather_train.csv | verified
+SKIPPED: source_manifest_v1.json | verified
+Evidence saved: /home/azureuser/electricity-project/evidence/ingestion_20261113T152656Z-bf9a443a.json
+PASS: uploaded=0, skipped=7

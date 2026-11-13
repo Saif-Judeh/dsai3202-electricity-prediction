@@ -1,0 +1,10 @@
+PASS: preserves_all_rows_and_chronological_splits
+PASS: exact_hour_gaps_and_zero_history
+PASS: daily_weekly_offsets_and_building_isolation
+PASS: boundary_history_and_calendar_fields
+PASS: availability_audits_and_predictor_allowlist
+PASS: current_and_future_label_changes_do_not_change_predictors
+PASS: safe_rerun_and_processed_input_preservation
+PASS: changed_feature_output_blocked
+PASS: changed_processed_input_blocks_publication
+PASSED: 9 checks; evidence: /home/azureuser/electricity-project/evidence/feature_test_20261113T152646Z-751956cf.json

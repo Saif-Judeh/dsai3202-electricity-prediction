@@ -1,0 +1,50 @@
+{
+  "baseline_path": "/home/azureuser/electricity-project/evidence/feature_features-v1-4416c69c061b464e_etags.json",
+  "completion_manifest_verified": true,
+  "destination": "https://amazonlake60306539.blob.core.windows.net/electricity-project/curated/features-v1-4416c69c061b464e/",
+  "downloaded_verification_bytes": 149605301,
+  "elapsed_seconds": 24.079,
+  "files": [
+    {
+      "action": "skipped",
+      "etag": "\"0x8DF419AFC473974\"",
+      "file_name": "feature_manifest.json",
+      "sha256": "c6b834e6b7b6e64a5d9a44e8253c75d7da926e0bf1f807305549f31607724519",
+      "size_bytes": 5031
+    },
+    {
+      "action": "skipped",
+      "etag": "\"0x8DF419AF049804C\"",
+      "file_name": "feature_catalog.json",
+      "sha256": "e08cc3b988dfc6c75669cf1864845b7d9014b8f5037918a0f16e07988c6a6f7e",
+      "size_bytes": 11137
+    },
+    {
+      "action": "skipped",
+      "etag": "\"0x8DF419AF2545AE0\"",
+      "file_name": "test.parquet",
+      "sha256": "27f9a9ea9a5ce6943bcf4b6ffda1b8c899d7972d2275944982ae2ec05ed955a7",
+      "size_bytes": 22918819
+    },
+    {
+      "action": "skipped",
+      "etag": "\"0x8DF419AF5174E64\"",
+      "file_name": "train.parquet",
+      "sha256": "8f70d7f6a898e61089577a9a20176bd35543bbb374c970153dbc8b546220de2e",
+      "size_bytes": 103858941
+    },
+    {
+      "action": "skipped",
+      "etag": "\"0x8DF419AF83116FC\"",
+      "file_name": "validation.parquet",
+      "sha256": "152bca41e8e9392f699e7cf02a39e53cdaeccf56d389caefb68bc27c333f9a16",
+      "size_bytes": 22811373
+    }
+  ],
+  "local_validation": "passed",
+  "publisher_sha256": "2e967d105301a2e010fc9dab26c5dcfeeb18ae61f000940d932c1a1d9aff1f3f",
+  "run_id": "20261113T153419Z-c73f97b5",
+  "skipped": 5,
+  "status": "passed",
+  "uploaded": 0
+}

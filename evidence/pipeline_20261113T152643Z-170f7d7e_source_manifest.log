@@ -1,0 +1,9 @@
+CHECKED: building_metadata.csv | 45,527 bytes
+CHECKED: sample_submission.csv | 447,562,511 bytes
+CHECKED: test.csv | 1,462,461,085 bytes
+CHECKED: train.csv | 678,616,640 bytes
+CHECKED: weather_test.csv | 14,787,908 bytes
+CHECKED: weather_train.csv | 7,450,075 bytes
+PASS: existing manifest matches; no changes made.
+Collection bytes: 2,610,923,746
+Source bytes excluding template: 2,163,361,235

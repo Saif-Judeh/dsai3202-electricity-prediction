@@ -1,0 +1,10 @@
+PASS: valid_fixture_conversion_zeros_nulls_accounting
+PASS: safe_rerun_and_raw_preservation
+PASS: negative_blocks_publication
+PASS: duplicate_blocks_publication
+PASS: fractional_id_blocks_publication
+PASS: invalid_weather_blocks_publication
+PASS: duplicate_metadata_blocks_publication
+PASS: changed_source_blocked
+PASS: changed_output_blocked
+PASSED: 9 checks; evidence: /home/azureuser/electricity-project/evidence/quality_test_20261113T152643Z-ba85038d.json

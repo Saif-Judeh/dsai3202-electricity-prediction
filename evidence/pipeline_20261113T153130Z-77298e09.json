@@ -1,0 +1,118 @@
+{
+  "run_id": "20261113T153130Z-77298e09",
+  "status": "passed",
+  "tests_skipped": true,
+  "stages": [
+    {
+      "stage": "source_manifest",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/create_manifest.py"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_source_manifest.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.099
+    },
+    {
+      "stage": "raw_ingestion",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/ingest_raw.py"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_raw_ingestion.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 20.067,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/ingestion_20261113T153139Z-67080710.json"
+    },
+    {
+      "stage": "full_profile",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/profile_data.py"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_full_profile.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 103.055,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/profile_20261113T153159Z-de29c05a.json"
+    },
+    {
+      "stage": "etl",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/run_etl.py"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_etl.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.455,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/etl_20261113T153342Z-6bc60bb3.json"
+    },
+    {
+      "stage": "processed_publication",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/publish_processed.py",
+        "--etl-dir",
+        "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_processed_publication.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 21.784,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/publish_processed_20261113T153351Z-68dfe31f.json"
+    },
+    {
+      "stage": "training_eda",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/summarize_eda.py",
+        "--etl-dir",
+        "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_training_eda.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.08,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/eda_summary_20261113T153413Z-d1018501.json"
+    },
+    {
+      "stage": "features",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/build_features.py",
+        "--etl-dir",
+        "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_features.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.914,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/features_20261113T153418Z-c62deaa2.json"
+    },
+    {
+      "stage": "feature_publication",
+      "command": [
+        "/home/azureuser/electricity-project/.venv/bin/python",
+        "/home/azureuser/electricity-project/scripts/publish_features.py",
+        "--feature-dir",
+        "/home/azureuser/electricity-data/features/features-v1-4416c69c061b464e",
+        "--etl-dir",
+        "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969"
+      ],
+      "console_log": "/home/azureuser/electricity-project/evidence/pipeline_20261113T153130Z-77298e09_feature_publication.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 24.212,
+      "evidence_report": "/home/azureuser/electricity-project/evidence/publish_features_20261113T153419Z-c73f97b5.json"
+    }
+  ],
+  "runner_sha256": "593e1a2086f4d88c1dfd93b8cd229099184f77aee97f177b8756ab8593842d54",
+  "git_commit_at_start": "278129c51b042c085033f62e651abefd34bed487",
+  "git_dirty_at_start": true,
+  "processed_directory": "/home/azureuser/electricity-data/processed/etl-v1-c4c56f89d676b969",
+  "feature_directory": "/home/azureuser/electricity-data/features/features-v1-4416c69c061b464e",
+  "elapsed_seconds": 193.677
+}
