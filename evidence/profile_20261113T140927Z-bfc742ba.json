@@ -1,0 +1,446 @@
+{
+  "run_id": "20261113T140927Z-bfc742ba",
+  "status": "passed",
+  "population": "All rows in all six manifest-listed CSVs",
+  "sampling": "None",
+  "script_sha256": "6c907bf3bae8a5536257726e4cc711e73294fa978ddeedf1e0e29e6d8201ed9b",
+  "python_version": "3.12.3",
+  "duckdb_version": "1.4.3",
+  "memory_limit": "6GB",
+  "threads": 2,
+  "files": {
+    "building_metadata.csv": {
+      "row_count": 1449,
+      "columns": {
+        "site_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 15,
+          "intended_type": "BIGINT"
+        },
+        "building_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 1448,
+          "intended_type": "BIGINT"
+        },
+        "primary_use": {
+          "missing": 0,
+          "intended_type": "VARCHAR"
+        },
+        "square_feet": {
+          "missing": 0,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 283.0,
+          "max": 875000.0,
+          "intended_type": "DOUBLE"
+        },
+        "year_built": {
+          "missing": 774,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 1900,
+          "max": 2017,
+          "intended_type": "BIGINT"
+        },
+        "floor_count": {
+          "missing": 1094,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 1,
+          "max": 26,
+          "intended_type": "BIGINT"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "building_id"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "source_data",
+      "duration_seconds": 0.04
+    },
+    "sample_submission.csv": {
+      "row_count": 41697600,
+      "columns": {
+        "row_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 41697599,
+          "intended_type": "BIGINT"
+        },
+        "meter_reading": {
+          "missing": 0,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "intended_type": "DOUBLE"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "row_id"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "submission_template",
+      "duration_seconds": 16.4
+    },
+    "test.csv": {
+      "row_count": 41697600,
+      "columns": {
+        "row_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 41697599,
+          "intended_type": "BIGINT"
+        },
+        "building_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 1448,
+          "intended_type": "BIGINT"
+        },
+        "meter": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 3,
+          "intended_type": "BIGINT"
+        },
+        "timestamp": {
+          "missing": 0,
+          "cast_failures": 0,
+          "off_hour": 0,
+          "min": "2017-01-01 00:00:00",
+          "max": "2018-12-31 23:00:00",
+          "intended_type": "TIMESTAMP"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "building_id",
+            "meter",
+            "timestamp"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        },
+        {
+          "columns": [
+            "row_id"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "source_data",
+      "duration_seconds": 47.64
+    },
+    "train.csv": {
+      "row_count": 20216100,
+      "columns": {
+        "building_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 1448,
+          "intended_type": "BIGINT"
+        },
+        "meter": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 3,
+          "intended_type": "BIGINT"
+        },
+        "timestamp": {
+          "missing": 0,
+          "cast_failures": 0,
+          "off_hour": 0,
+          "min": "2016-01-01 00:00:00",
+          "max": "2016-12-31 23:00:00",
+          "intended_type": "TIMESTAMP"
+        },
+        "meter_reading": {
+          "missing": 0,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 21904700.0,
+          "intended_type": "DOUBLE"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "building_id",
+            "meter",
+            "timestamp"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "source_data",
+      "duration_seconds": 17.96
+    },
+    "weather_test.csv": {
+      "row_count": 277243,
+      "columns": {
+        "site_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 15,
+          "intended_type": "BIGINT"
+        },
+        "timestamp": {
+          "missing": 0,
+          "cast_failures": 0,
+          "off_hour": 0,
+          "min": "2017-01-01 00:00:00",
+          "max": "2018-12-31 23:00:00",
+          "intended_type": "TIMESTAMP"
+        },
+        "air_temperature": {
+          "missing": 104,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -28.1,
+          "max": 48.3,
+          "intended_type": "DOUBLE"
+        },
+        "cloud_coverage": {
+          "missing": 140448,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 9.0,
+          "intended_type": "DOUBLE"
+        },
+        "dew_temperature": {
+          "missing": 327,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -31.6,
+          "max": 26.7,
+          "intended_type": "DOUBLE"
+        },
+        "precip_depth_1_hr": {
+          "missing": 95588,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -1.0,
+          "max": 597.0,
+          "intended_type": "DOUBLE"
+        },
+        "sea_level_pressure": {
+          "missing": 21265,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 972.0,
+          "max": 1050.1,
+          "intended_type": "DOUBLE"
+        },
+        "wind_direction": {
+          "missing": 12370,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 360.0,
+          "intended_type": "DOUBLE"
+        },
+        "wind_speed": {
+          "missing": 460,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 24.2,
+          "intended_type": "DOUBLE"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "site_id",
+            "timestamp"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "source_data",
+      "duration_seconds": 0.59
+    },
+    "weather_train.csv": {
+      "row_count": 139773,
+      "columns": {
+        "site_id": {
+          "missing": 0,
+          "cast_failures": 0,
+          "fractional": 0,
+          "min": 0,
+          "max": 15,
+          "intended_type": "BIGINT"
+        },
+        "timestamp": {
+          "missing": 0,
+          "cast_failures": 0,
+          "off_hour": 0,
+          "min": "2016-01-01 00:00:00",
+          "max": "2016-12-31 23:00:00",
+          "intended_type": "TIMESTAMP"
+        },
+        "air_temperature": {
+          "missing": 55,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -28.9,
+          "max": 47.2,
+          "intended_type": "DOUBLE"
+        },
+        "cloud_coverage": {
+          "missing": 69173,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 9.0,
+          "intended_type": "DOUBLE"
+        },
+        "dew_temperature": {
+          "missing": 113,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -35.0,
+          "max": 26.1,
+          "intended_type": "DOUBLE"
+        },
+        "precip_depth_1_hr": {
+          "missing": 50289,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": -1.0,
+          "max": 343.0,
+          "intended_type": "DOUBLE"
+        },
+        "sea_level_pressure": {
+          "missing": 10618,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 968.2,
+          "max": 1045.5,
+          "intended_type": "DOUBLE"
+        },
+        "wind_direction": {
+          "missing": 6268,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 360.0,
+          "intended_type": "DOUBLE"
+        },
+        "wind_speed": {
+          "missing": 304,
+          "cast_failures": 0,
+          "nonfinite": 0,
+          "min": 0.0,
+          "max": 19.0,
+          "intended_type": "DOUBLE"
+        }
+      },
+      "key_checks": [
+        {
+          "columns": [
+            "site_id",
+            "timestamp"
+          ],
+          "duplicate_key_groups": 0,
+          "excess_rows": 0
+        }
+      ],
+      "role": "source_data",
+      "duration_seconds": 0.58
+    }
+  },
+  "notes": [
+    "Missing values include empty strings and whitespace-only fields.",
+    "Duplicate keys are compared as trimmed source text, with blanks treated as null.",
+    "Raw data is not modified. Report generation is not ETL publication.",
+    "Competition test rows have no actual target; submission-template values are not labels.",
+    "Timestamp timezone alignment and electricity unit conversion need explicit ETL rules."
+  ],
+  "source_manifest_sha256": "7553028515ebdf9822ffa2d59e126061f1041317587000f05d5591d3d10c67c0",
+  "source_version": "ashrae-v1",
+  "electricity": {
+    "row_count": 12060910,
+    "building_count": 1413,
+    "first_timestamp": "2016-01-01 00:00:00",
+    "last_timestamp": "2016-12-31 23:00:00",
+    "missing_or_unparseable_readings": 0,
+    "nonfinite_readings": 0,
+    "negative_readings": 0,
+    "zero_readings": 530169,
+    "finite_nonnegative_readings": 12060910,
+    "min_valid_reading": 0.0,
+    "max_valid_reading": 79769.0,
+    "p25_p50_p75_p95_p99": [
+      19.5,
+      62.831900000000005,
+      170.075,
+      647.409549999999,
+      1629.61
+    ],
+    "units": "Original recorded units; not standardized. Do not interpret as uniformly kWh.",
+    "quantile_population": "All finite nonnegative electricity readings; exact quantiles; no sample.",
+    "zero_policy": "Reported for investigation; zero values are not automatically rejected.",
+    "duplicate_policy": "Key duplicates are reported, not removed; conflicting readings require investigation."
+  },
+  "meter_row_counts": [
+    {
+      "meter": "0",
+      "rows": 12060910
+    },
+    {
+      "meter": "1",
+      "rows": 4182440
+    },
+    {
+      "meter": "2",
+      "rows": 2708713
+    },
+    {
+      "meter": "3",
+      "rows": 1264037
+    }
+  ],
+  "metadata_coverage": {
+    "training_rows_without_building_metadata": 0
+  },
+  "duration_seconds": 103.06,
+  "peak_process_rss_mib": 4793.0
+}
