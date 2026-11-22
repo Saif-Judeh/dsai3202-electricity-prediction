@@ -1,0 +1,91 @@
+{
+  "feature_version": "features-v1-4416c69c061b464e",
+  "split": "September\u2013October 2016 validation",
+  "total_rows": 2045185,
+  "evaluated_rows": 2038958,
+  "missing_weekly_history": 6227,
+  "baseline_mae_kwh": 21.690261201417652,
+  "mae_for_10_percent_improvement_kwh": 19.521235081275886,
+  "by_site": [
+    {
+      "site_id": 7,
+      "evaluated_rows": 17568,
+      "mae_kwh": 210.79287682149004
+    },
+    {
+      "site_id": 13,
+      "evaluated_rows": 205923,
+      "mae_kwh": 47.2145316113307
+    },
+    {
+      "site_id": 11,
+      "evaluated_rows": 7136,
+      "mae_kwh": 38.663399663677154
+    },
+    {
+      "site_id": 9,
+      "evaluated_rows": 177600,
+      "mae_kwh": 29.284947584460006
+    },
+    {
+      "site_id": 14,
+      "evaluated_rows": 148094,
+      "mae_kwh": 26.605214685267438
+    },
+    {
+      "site_id": 3,
+      "evaluated_rows": 395701,
+      "mae_kwh": 21.86149393102377
+    },
+    {
+      "site_id": 12,
+      "evaluated_rows": 52627,
+      "mae_kwh": 20.94473651547668
+    },
+    {
+      "site_id": 8,
+      "evaluated_rows": 98119,
+      "mae_kwh": 15.062676833233123
+    },
+    {
+      "site_id": 10,
+      "evaluated_rows": 37807,
+      "mae_kwh": 14.517515967942186
+    },
+    {
+      "site_id": 4,
+      "evaluated_rows": 128787,
+      "mae_kwh": 12.526027291574307
+    },
+    {
+      "site_id": 1,
+      "evaluated_rows": 74664,
+      "mae_kwh": 12.437894638647691
+    },
+    {
+      "site_id": 2,
+      "evaluated_rows": 197437,
+      "mae_kwh": 11.734535927916562
+    },
+    {
+      "site_id": 6,
+      "evaluated_rows": 52679,
+      "mae_kwh": 10.831289578389837
+    },
+    {
+      "site_id": 15,
+      "evaluated_rows": 162268,
+      "mae_kwh": 10.429024653043225
+    },
+    {
+      "site_id": 0,
+      "evaluated_rows": 152252,
+      "mae_kwh": 9.866063418014585
+    },
+    {
+      "site_id": 5,
+      "evaluated_rows": 130296,
+      "mae_kwh": 7.516887873764043
+    }
+  ]
+}
