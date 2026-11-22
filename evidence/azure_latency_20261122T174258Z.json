@@ -1,0 +1,117 @@
+{
+  "endpoint": "electricity-60306539",
+  "started_utc": "2026-11-22T17:42:58.551897+00:00",
+  "method": "Sequential single-record requests from the VM using one HTTPS session",
+  "warmup_requests_excluded": 1,
+  "required_successes": 20,
+  "p95_target_ms": 1000,
+  "requests": [
+    {
+      "request": 1,
+      "ok": true,
+      "latency_ms": 11.036616999717808
+    },
+    {
+      "request": 2,
+      "ok": true,
+      "latency_ms": 12.407843999881152
+    },
+    {
+      "request": 3,
+      "ok": true,
+      "latency_ms": 10.053097000309208
+    },
+    {
+      "request": 4,
+      "ok": true,
+      "latency_ms": 10.238501000003453
+    },
+    {
+      "request": 5,
+      "ok": true,
+      "latency_ms": 9.929994999765768
+    },
+    {
+      "request": 6,
+      "ok": true,
+      "latency_ms": 10.011796999606304
+    },
+    {
+      "request": 7,
+      "ok": true,
+      "latency_ms": 12.619349000033253
+    },
+    {
+      "request": 8,
+      "ok": true,
+      "latency_ms": 10.55300799998804
+    },
+    {
+      "request": 9,
+      "ok": true,
+      "latency_ms": 11.000116000104754
+    },
+    {
+      "request": 10,
+      "ok": true,
+      "latency_ms": 9.512286999779462
+    },
+    {
+      "request": 11,
+      "ok": true,
+      "latency_ms": 9.669991000009759
+    },
+    {
+      "request": 12,
+      "ok": true,
+      "latency_ms": 9.355283999866515
+    },
+    {
+      "request": 13,
+      "ok": true,
+      "latency_ms": 9.306682999977056
+    },
+    {
+      "request": 14,
+      "ok": true,
+      "latency_ms": 9.348284000225249
+    },
+    {
+      "request": 15,
+      "ok": true,
+      "latency_ms": 9.831292999933794
+    },
+    {
+      "request": 16,
+      "ok": true,
+      "latency_ms": 10.167100000217033
+    },
+    {
+      "request": 17,
+      "ok": true,
+      "latency_ms": 9.27498300006846
+    },
+    {
+      "request": 18,
+      "ok": true,
+      "latency_ms": 9.872894999716664
+    },
+    {
+      "request": 19,
+      "ok": true,
+      "latency_ms": 9.867794000001595
+    },
+    {
+      "request": 20,
+      "ok": true,
+      "latency_ms": 9.405985000285
+    }
+  ],
+  "summary": {
+    "successful_predictions": 20,
+    "measured_requests": 20,
+    "median_ms": 9.9,
+    "p95_ms": 12.41,
+    "meets_target": true
+  }
+}

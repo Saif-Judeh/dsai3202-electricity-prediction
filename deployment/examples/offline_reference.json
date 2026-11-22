@@ -1,0 +1,9 @@
+{
+  "model": "electricity-catboost:1",
+  "validation_timestamp": "2016-09-01 00:00:00",
+  "predictions_kwh": [
+    911.4830355284095
+  ],
+  "relative_tolerance": 1e-09,
+  "absolute_tolerance_kwh": 1e-08
+}
