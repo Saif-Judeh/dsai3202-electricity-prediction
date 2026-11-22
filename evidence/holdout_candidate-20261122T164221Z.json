@@ -1,0 +1,113 @@
+{
+  "training_run": "candidate-20261122T164221Z",
+  "training_commit": "16cf4c9ba5afb1939aff47f53935e51180851932",
+  "feature_version": "features-v1-4416c69c061b464e",
+  "model_sha256": "8b0bcd930dcb176613f2509a33c95d8b4373e84e2c576e80d1afbe63e6f76d91",
+  "holdout_sha256": "27f9a9ea9a5ce6943bcf4b6ffda1b8c899d7972d2275944982ae2ec05ed955a7",
+  "period": "November\u2013December 2016",
+  "total_rows": 2023232,
+  "evaluated_rows": 1989186,
+  "rows_without_weekly_history": 34046,
+  "weekly_mae_kwh": 19.03530021075448,
+  "candidate_mae_kwh": 13.372523821068631,
+  "improvement_percent": 29.748815763286572,
+  "meets_10_percent_target": true,
+  "by_site": [
+    {
+      "site_id": 0,
+      "rows": 152259,
+      "weekly_mae_kwh": 11.99024289092842,
+      "candidate_mae_kwh": 6.293776562206309
+    },
+    {
+      "site_id": 1,
+      "rows": 74664,
+      "weekly_mae_kwh": 13.973267743490837,
+      "candidate_mae_kwh": 6.950435237259911
+    },
+    {
+      "site_id": 2,
+      "rows": 197251,
+      "weekly_mae_kwh": 14.346023188729081,
+      "candidate_mae_kwh": 7.758648658290649
+    },
+    {
+      "site_id": 3,
+      "rows": 393785,
+      "weekly_mae_kwh": 17.011085973310312,
+      "candidate_mae_kwh": 7.765552182913295
+    },
+    {
+      "site_id": 4,
+      "rows": 131456,
+      "weekly_mae_kwh": 15.58945344601996,
+      "candidate_mae_kwh": 8.260084091345417
+    },
+    {
+      "site_id": 5,
+      "rows": 130296,
+      "weekly_mae_kwh": 8.451432042426475,
+      "candidate_mae_kwh": 4.99726069708317
+    },
+    {
+      "site_id": 6,
+      "rows": 52221,
+      "weekly_mae_kwh": 13.581979288025888,
+      "candidate_mae_kwh": 7.594102155396162
+    },
+    {
+      "site_id": 7,
+      "rows": 17568,
+      "weekly_mae_kwh": 277.6270321038252,
+      "candidate_mae_kwh": 491.1057206002139
+    },
+    {
+      "site_id": 8,
+      "rows": 72672,
+      "weekly_mae_kwh": 12.635124335369882,
+      "candidate_mae_kwh": 4.477325938379736
+    },
+    {
+      "site_id": 9,
+      "rows": 178567,
+      "weekly_mae_kwh": 19.67580401865966,
+      "candidate_mae_kwh": 8.364893397060639
+    },
+    {
+      "site_id": 10,
+      "rows": 37746,
+      "weekly_mae_kwh": 13.609954554124942,
+      "candidate_mae_kwh": 6.869996826905857
+    },
+    {
+      "site_id": 11,
+      "rows": 7314,
+      "weekly_mae_kwh": 13.76106426032267,
+      "candidate_mae_kwh": 9.059852717805036
+    },
+    {
+      "site_id": 12,
+      "rows": 52615,
+      "weekly_mae_kwh": 22.75753162596218,
+      "candidate_mae_kwh": 8.019469447462804
+    },
+    {
+      "site_id": 13,
+      "rows": 206218,
+      "weekly_mae_kwh": 23.553428047018205,
+      "candidate_mae_kwh": 21.57117712743118
+    },
+    {
+      "site_id": 14,
+      "rows": 149127,
+      "weekly_mae_kwh": 26.290245508191006,
+      "candidate_mae_kwh": 12.205715665834338
+    },
+    {
+      "site_id": 15,
+      "rows": 135427,
+      "weekly_mae_kwh": 12.619850428644213,
+      "candidate_mae_kwh": 6.929260852827822
+    }
+  ]
+}
