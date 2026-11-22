@@ -1,0 +1,27 @@
+{
+  "creation_context": {
+    "created_at": "2026-11-22T17:17:52.887398+00:00",
+    "created_by": "Sief Addeen Joudeh",
+    "created_by_type": "CreatedByType.USER",
+    "last_modified_at": "2026-11-22T17:17:52.887398+00:00",
+    "last_modified_by": "Sief Addeen Joudeh",
+    "last_modified_by_type": "CreatedByType.USER"
+  },
+  "description": "Next-hour building electricity forecast in kWh using meter history, calendar and building features. Weather omitted. Holdout comparison covers rows with weekly history.",
+  "id": "azureml:/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-saif-60306539/providers/Microsoft.MachineLearningServices/workspaces/mlwdsai320260306539/models/electricity-catboost/versions/1",
+  "name": "electricity-catboost",
+  "path": "azureml://subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-saif-60306539/workspaces/mlwdsai320260306539/datastores/workspaceblobstore/paths/LocalUpload/34ce789486f5051c86d2521d3db7ec9a234373f27ec76d64ea766d995ad16b89/model.cbm",
+  "properties": {},
+  "resourceGroup": "rg-dsai3202-saif-60306539",
+  "stage": "Development",
+  "tags": {
+    "feature_version": "features-v1-4416c69c061b464e",
+    "holdout_mae_kwh": "13.3725",
+    "model_sha256": "8b0bcd930dcb176613f2509a33c95d8b4373e84e2c576e80d1afbe63e6f76d91",
+    "training_commit": "16cf4c9ba5afb1939aff47f53935e51180851932",
+    "training_run": "candidate-20261122T164221Z",
+    "weekly_baseline_mae_kwh": "19.0353"
+  },
+  "type": "custom_model",
+  "version": "1"
+}

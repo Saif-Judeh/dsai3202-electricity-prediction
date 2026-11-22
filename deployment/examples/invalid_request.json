@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "building_id": 791,
+      "site_id": 7,
+      "primary_use": "Education",
+      "square_feet": 150695.0,
+      "target_hour": 0,
+      "target_weekday": 4,
+      "target_month": 9,
+      "target_is_weekend": false,
+      "lag_24h_kwh": 914.11,
+      "lag_168h_kwh": 895.1,
+      "lag_1h_missing": false,
+      "lag_24h_missing": false,
+      "lag_168h_missing": false,
+      "lag_1h_is_zero": false
+    }
+  ]
+}
