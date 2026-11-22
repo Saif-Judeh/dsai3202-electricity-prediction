@@ -252,6 +252,25 @@ lab source files has been identified in this workflow; the project scripts were 
 with ChatGPT assistance and developed against the electricity dataset. Dataset and unit
 references are linked above; the tool's role and resulting changes are documented below.
 
+## Model and evaluation
+
+### Validation results
+
+We compared CatBoost with a baseline that predicts each building’s electricity
+use from its value at the same hour one week earlier. Both methods were scored
+on the same September–October readings.
+
+| Validation group | Readings | Weekly baseline MAE (kWh) | CatBoost MAE (kWh) | Error reduction |
+|---|---:|---:|---:|---:|
+| All sites | 2,038,958 | 21.690 | 11.027 | 49.16% |
+| Site 7 | 17,568 | 210.793 | 152.465 | 27.67% |
+
+CatBoost reduced average error at all 16 sites. Site 7 still had the highest
+average error, even after the improvement. The percentage reduction ranged from
+27.57% (Site 2) 70.23% (Site 8).
+
+[Full comparison for all 16 sites](evidence/phase2_validation_comparison.txt)
+
 ## AI use
 
 Tool: ChatGPT, including code-generation and local testing tools. Requests covered
@@ -270,3 +289,5 @@ The team validated the generated implementation by running the full-data pipelin
 controlled failure tests, publication checks and safe reruns. AI-generated suggestions
 are not treated as experimental results; the reported outcomes come from the retained
 VM evidence. No model-performance claim is made in this phase.
+
+(Adam) AI use: I recieved AI help with the initial connection to github and I recieved help with the comparison and the analysis wording in the README file. 
