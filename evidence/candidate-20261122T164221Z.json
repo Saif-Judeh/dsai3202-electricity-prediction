@@ -1,0 +1,45 @@
+{
+  "run_id": "candidate-20261122T164221Z",
+  "code_commit": "16cf4c9ba5afb1939aff47f53935e51180851932",
+  "feature_version": "features-v1-4416c69c061b464e",
+  "predictors": [
+    "building_id",
+    "site_id",
+    "primary_use",
+    "square_feet",
+    "target_hour",
+    "target_weekday",
+    "target_month",
+    "target_is_weekend",
+    "lag_1h_kwh",
+    "lag_24h_kwh",
+    "lag_168h_kwh",
+    "lag_1h_missing",
+    "lag_24h_missing",
+    "lag_168h_missing",
+    "lag_1h_is_zero"
+  ],
+  "categorical_features": [
+    "building_id",
+    "site_id",
+    "primary_use"
+  ],
+  "parameters": {
+    "iterations": 300,
+    "depth": 7,
+    "learning_rate": 0.12,
+    "loss_function": "RMSE",
+    "random_seed": 42,
+    "thread_count": 4,
+    "verbose": 50,
+    "allow_writing_files": false
+  },
+  "training_sample_rule": "hash(building_id, target_time_reported) % 8 = 0",
+  "training_rows": 998863,
+  "validation_rows": 2045185,
+  "evaluated_rows": 2038958,
+  "weekly_baseline_mae_kwh": 21.69026120141737,
+  "candidate_mae_kwh": 11.026935740866962,
+  "improvement_percent": 49.16181212171665,
+  "output_directory": "/home/azureuser/electricity-data/models/candidate-20261122T164221Z"
+}
