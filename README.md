@@ -260,6 +260,16 @@ We compared CatBoost with a baseline that predicts each building’s electricity
 use from its value at the same hour one week earlier. Both methods were scored
 on the same September–October readings.
 
+#### Weekly Baseline and Fair Comparison
+
+The weekly baseline predicts a building's electricity consumption based on the recorded reading for the same building one week (168 hours) earlier. This straightforward strategy simply uses the previous value for the prediction.
+
+There were 2,045,185 validation readings in the September-October time period, however 6,227 did not have a matching reading available from one week earlier. Due to this, the weekly baseline could not produce a prediction for those observations. Consequently, we decided to exclude these readings from the comparison and evaluated both CatBoost and the weekly baseline on the same 2,038,958 eligible readings. Using identical observations ensures fairness in the comparison and that the MAE (Mean Absolute Error) actually reflects the differences in the abilities of the forecasting methods.
+
+#### Validation and Final Holdout Results
+
+MAE is the mean absolute difference between predicted and actual electricity consumption, measured in kilowatt-hours (kWh). A lower MAE means more accurate predictions.
+
 | Validation group | Readings | Weekly baseline MAE (kWh) | CatBoost MAE (kWh) | Error reduction |
 |---|---:|---:|---:|---:|
 | All sites | 2,038,958 | 21.690 | 11.027 | 49.16% |
@@ -268,6 +278,34 @@ on the same September–October readings.
 CatBoost reduced average error at all 16 sites. Site 7 still had the highest
 average error, even after the improvement. The percentage reduction ranged from
 27.57% (Site 2) 70.23% (Site 8).
+
+The validation results show 49.16% reduction in MAE, showing that CatBoost significantly improved compared to the weekly baseline during model evaluation. However, the final holdout is the more important result when it comes to testing our hypothesis because it uses chronologically later observations that were not used for model selection.
+
+On the November-December final holdout, CatBoost reduced MAE by 29.75% compared to the weekly baseline method. This also greatly surpasses our target of at least 10% lower MAE. We can conclude that the final holdout results support our hypothesis for the evaluated buildings.
+
+#### Site-Level Analysis: Site 7
+
+Although CatBoost improved performance on all 16 sites, the improvment was not equally large everywhere. Site 7 is a glaring example. Across its 17,568 validation readings,  the weekly baseline MAE was 210.793 kWh, while CatBoost achieved 152.465 kWh, representing a 27.67% reduction.
+
+Despite this improvement, Site 7 still had the highest MAE across all sites. This makes clear that the overall average isn't sufficient by itself to evaluate model performance. The overal 49.16% reductiond describes the pooled result, but it does not mean that every site experiences the same level of prediction accuracy. 
+
+Site 7's remaining error shows that the model still has difficulty with some building electricity patterns. Despite this finding, our evaluation has not established a specific reason for Site 7's mysteriously higher error values. Further investigation would be required before diagnosing the issue or even attributing the difficulty to certain characteristics, whether they may be building or operation ralted.
+
+#### Representative Individual Prediction Examples
+
+To demonstrate individual predictions, we examined examples from the September-October validation period.
+
+| Outcome | Building ID | Site ID | Timestamp | Actual (kWh) | Weekly baseline (kWh) | CatBoost (kWh) | Baseline absolute error (kWh) | CatBoost absolute error (kWh) |
+|---|---:|---:|---|---:|---:|---:|---:|---:|
+| CatBoost improved | 993 | 9 | 2016-10-17 01:00 | 31,921.00 | 1,305.00 | 19,742.65 | 30,616.00 | 12,178.35 |
+| CatBoost did worse | 1088 | 13 | 2016-10-25 16:00 | 2,683.60 | 2,784.60 | 6,652.49 | 101.00 | 3,968.89 |
+
+For building 993 at Site 9 on the 17th of October 2016 at 01:00, actual usage was 31,921 kWh. The weekly baseline predicted 1305 kWh, resulting in an AE of 30.616 kWh. CatBoost predicted 19,742.65 kWh, reducing the AE to 12,178.35 kWh.
+
+However, CatBoost was not flawless. For building 1088 at Site 13 on the 25th of October 2016 at 16:00, the actual usage was 2,683.6 kWh. The weekly baseline predicted 2,784.60 kWh, with an AE of 101 kWh, while CatBoost predicted 6,652.49 kWh, producing a larger error of 3,968.89 kWh.
+
+We can see from these examples that model performance varies depending on individual readings. While CatBoost was able to significantly improve MAE, it was outperformed on some observations. Note that these examples were selected to show contrasting outcomes rather than to equate the two methods.
+
 
 [Full comparison for all 16 sites](evidence/phase2_validation_comparison.txt)
 
@@ -377,6 +415,11 @@ The handoff instructions contain the commands for creating the endpoint, deployi
 
 | Team member | Phase | Work completed | Evidence |
 |---|---|---|---|
+| **Adam Nashbat — 60304819** | Phase 2 · Baseline and error analysis | Ran the weekly baseline on his lab VM using the September–October validation data. Saved the baseline results, compared CatBoost and baseline errors across all 16 sites, and explained why Site 7 remained difficult to forecast despite a 27.67% reduction in MAE. Committed the evaluation scripts and results through his GitHub account and prepared the baseline and error-analysis slides. Extracted 2 individual observations to show contrasting performance instances. | [Weekly baseline PR #1](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/1) · [Validation comparison PR #3](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/3) |
+| **Saif al deen Judeh — 60306539** | Phase 2 · Model training and holdout evaluation | Trained the CatBoost candidate on the project VM and recorded the training sample, parameters, seed, and feature version. Evaluated the saved model against the weekly baseline on 1,989,186 November–December holdout readings and verified a **29.75% reduction in MAE**. | [Candidate model PR #2](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/2) · [Holdout evaluation PR #4](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/4) |
+| **Saif al deen Judeh — 60306539** | Phase 2 · Azure deployment and verification | Registered `electricity-catboost:1`, deployed it to Azure ML, and confirmed that the live and offline predictions agreed on the same input. Verified the missing-field rejection, measured latency over 20 successful requests, and documented how to remove and recreate the endpoint for assessment. | [Deployment and testing PR #5](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/5) · [Endpoint handoff PR #6](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/6) |
+
+
 | **Adam Nashbat — 60304819** | Phase 2 · Baseline and error analysis | Ran the weekly baseline on his lab VM using the September–October validation data. Saved the baseline results, compared CatBoost and baseline errors across all 16 sites, and explained why Site 7 remained difficult to forecast despite a 27.67% reduction in MAE. Committed the evaluation scripts and results through his GitHub account and prepared the baseline and error-analysis slides. | [Weekly baseline PR #1](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/1) · [Validation comparison PR #3](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/3) |
 | **Saif al deen Judeh — 60306539** | Phase 2 · Model training and holdout evaluation | Trained the CatBoost candidate on the project VM and recorded the training sample, parameters, seed, and feature version. Evaluated the saved model against the weekly baseline on 1,989,186 November–December holdout readings and verified a **29.75% reduction in MAE**. | [Candidate model PR #2](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/2) · [Holdout evaluation PR #4](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/4) |
 | **Saif al deen Judeh — 60306539** | Phase 2 · Azure deployment and verification | Registered `electricity-catboost:1`, deployed it to Azure ML, and confirmed that the live and offline predictions agreed on the same input. Verified the missing-field rejection, measured latency over 20 successful requests, and documented how to remove and recreate the endpoint for assessment. | [Deployment and testing PR #5](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/5) · [Endpoint handoff PR #6](https://github.com/Saif-Judeh/dsai3202-electricity-prediction/pull/6) |
@@ -410,3 +453,5 @@ VM evidence. No model-performance claim is made in this phase.
 | ChatGPT — Saif | Why did my offline-versus-live comparison raise a `TypeError` when reading the saved Azure response? | It suggested checking the type after the first JSON decode and decoding the value again if it was a string. | I confirmed the first decode returned a string and reran the comparison. The offline and live predictions both printed as `911.483035528409` kWh and passed the declared tolerance. |
 | ChatGPT — Saif | How can I tell whether Azure rejected the invalid request because of the missing feature? | Commands to send the invalid request and retrieve the scoring log from the `blue` deployment. | I ran both commands. The client exited with code `1`, and the scoring log confirmed that the request failed the requirement for exactly 15 feature fields. |
 | ChatGPT — Saif | How can I measure response time from the VM and check that each request returns the expected forecast? | A script that excluded one warm-up request, timed 20 sequential requests, and compared each response with the offline reference. | I installed the missing `requests` dependency and ran the test. All 20 predictions matched. Median latency was 9.90 ms and p95 was 12.41 ms. |
+| ChatGPT — Adam | I asked it to give me my part (explanations, evaluations) and my section in this README so I can organize my work and also use its responses as a template | Typed out my work based on the AI response but not simple copying | Wrote my answers in my own words. |
+| ChatGPT — Adam | I asked it to help me extract two representative observations | It guided my along the way to fulfill the task | I took the observations and used the AI response as a template for interpretation. |
