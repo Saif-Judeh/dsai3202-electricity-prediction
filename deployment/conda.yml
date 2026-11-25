@@ -1,0 +1,11 @@
+name: electricity-serving
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - azureml-inference-server-http
+      - catboost==1.2.8
+      - pandas==2.3.3
+      - numpy==1.26.4

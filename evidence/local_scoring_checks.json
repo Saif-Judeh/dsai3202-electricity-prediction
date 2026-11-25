@@ -1,0 +1,10 @@
+{
+  "model": "electricity-catboost:1",
+  "valid_response": {
+    "predictions_kwh": [
+      911.4830355284095
+    ]
+  },
+  "expected_kwh": 911.4830355284095,
+  "invalid_request_error": "Each record must contain exactly the model's 15 feature fields."
+}
